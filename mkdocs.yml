@@ -1,0 +1,38 @@
+site_name: Limbo RPG
+theme:
+  name: material
+  icon:
+    admonition:
+      offensive: material/sword
+      defensive: material/shield
+      utility: material/wrench
+      passive: material/puzzle
+      feature: material/cog
+  palette:
+    # Dark mode default (fits your tone)
+    scheme: slate
+    primary: black
+    accent: red
+  features:
+    - navigation.tabs # Top navbar
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition # For Move Cards/Callouts
+  - pymdownx.details # For collapsible text
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - tables 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css

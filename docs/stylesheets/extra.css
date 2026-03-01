@@ -1,0 +1,104 @@
+/* Add vertical lines to tables */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  border-right: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset table:not([class]) th:last-child,
+.md-typeset table:not([class]) td:last-child {
+  border-right: none;
+}
+
+/* --- Custom Admonition: Offensive (Red + Sword) --- */
+.md-typeset .admonition.offensive,
+.md-typeset details.offensive {
+  border-color: #ef5350;
+}
+.md-typeset .offensive > .admonition-title,
+.md-typeset .offensive > summary {
+  background-color: rgba(239, 83, 80, 0.1);
+  border-color: #ef5350;
+}
+.md-typeset .offensive > .admonition-title::before,
+.md-typeset .offensive > summary::before {
+  background-color: #ef5350;
+
+  -webkit-mask-image: var(--md-admonition-icon--offensive);
+  mask-image: var(--md-admonition-icon--offensive);
+}
+
+/* --- Custom Admonition: Defensive (Blue + Shield) --- */
+.md-typeset .admonition.defensive,
+.md-typeset details.defensive {
+  border-color: #448aff;
+}
+.md-typeset .defensive > .admonition-title,
+.md-typeset .defensive > summary {
+  background-color: rgba(68, 138, 255, 0.1);
+  border-color: #448aff;
+}
+.md-typeset .defensive > .admonition-title::before,
+.md-typeset .defensive > summary::before {
+  background-color: #448aff;
+  -webkit-mask-image: var(--md-admonition-icon--defensive);
+  mask-image: var(--md-admonition-icon--defensive);
+}
+
+/* --- Custom Admonition: Utility (Green + Wrench) --- */
+.md-typeset .admonition.utility,
+.md-typeset details.utility {
+  border-color: #00c853;
+}
+.md-typeset .utility > .admonition-title,
+.md-typeset .utility > summary {
+  background-color: rgba(0, 200, 83, 0.1);
+  border-color: #00c853;
+}
+.md-typeset .utility > .admonition-title::before,
+.md-typeset .utility > summary::before {
+  background-color: #00c853;
+  -webkit-mask-image: var(--md-admonition-icon--utility);
+  mask-image: var(--md-admonition-icon--utility);
+}
+
+/* --- Custom Admonition: Passive (Purple + Puzzle) --- */
+.md-typeset .admonition.passive,
+.md-typeset details.passive {
+  border-color: #ab47bc;
+}
+.md-typeset .passive > .admonition-title,
+.md-typeset .passive > summary {
+  background-color: rgba(171, 71, 188, 0.1);
+  border-color: #ab47bc;
+}
+.md-typeset .passive > .admonition-title::before,
+.md-typeset .passive > summary::before {
+  background-color: #ab47bc;
+  -webkit-mask-image: var(--md-admonition-icon--passive);
+  mask-image: var(--md-admonition-icon--passive);
+}
+
+/* --- Custom Admonition: Feature (Gray + Cog) --- */
+.md-typeset .admonition.feature,
+.md-typeset details.feature {
+  border-color: #595959;
+}
+.md-typeset .feature > .admonition-title,
+.md-typeset .feature > summary {
+  background-color: rgba(171, 71, 188, 0.1);
+  border-color: #7d7d7d;
+}
+.md-typeset .feature > .admonition-title::before,
+.md-typeset .feature > summary::before {
+  background-color: #7d7d7d;
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+  mask-image: var(--md-admonition-icon--feature);
+}
+.offensive {
+  color: #ef5350;
+  font-weight: bold;
+}
+
+.defensive {
+  color: #448aff;
+  font-weight: bold;
+}
