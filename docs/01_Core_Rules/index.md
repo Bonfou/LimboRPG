@@ -17,9 +17,9 @@ When you engage in combat with one or more other entities, the game shifts. Unli
 ## Anomaly Tiers
 
 Limbo is not static. The deeper you go, or the longer you survive, the harder the universe pushes back.
-- Every threat, weapon, and check in the game is assigned an Anomaly Tier (AT).
+- Every threat, weapon, and entity in the game is assigned an Anomaly Tier (AT).
 -  A Tier III weapon deals drastically more damage than a Tier I weapon. A Tier V horror operates on a level of physics that a Tier I scavenger cannot comprehend.
-- In Narrative play, rolling a Natural 6 multiplies your success depending on your current Anomaly Tier. In Combat, damage scales linearly the difference in Tier between combatants.
+- In Combat, damage scales linearly the difference in Tier between combatants.
 
 !!! warning "Survival Tip"
 	Combat can be a fail state. In many RPGs, combat is the best way to earn XP. In Limbo, combat is a resource drain that risks permanent death. Cred (XP) is earned by completing objectives, not by killing grunts. Fight only when you have to.
