@@ -93,6 +93,24 @@
   -webkit-mask-image: var(--md-admonition-icon--feature);
   mask-image: var(--md-admonition-icon--feature);
 }
+
+/* --- Custom Admonition: Dossier (Silver + ID Card) --- */
+.md-typeset .admonition.dossier,
+.md-typeset details.dossier {
+  border-color: #cfd8dc;
+}
+.md-typeset .dossier > .admonition-title,
+.md-typeset .dossier > summary {
+  background-color: rgba(207, 216, 220, 0.1);
+  border-color: #cfd8dc;
+}
+.md-typeset .dossier > .admonition-title::before,
+.md-typeset .dossier > summary::before {
+  background-color: #cfd8dc;
+  -webkit-mask-image: var(--md-admonition-icon--dossier);
+  mask-image: var(--md-admonition-icon--dossier);
+}
+
 .offensive {
   color: #ef5350;
   font-weight: bold;

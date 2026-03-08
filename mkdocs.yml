@@ -8,6 +8,7 @@ theme:
       utility: material/wrench
       passive: material/puzzle
       feature: material/cog
+      dossier: material/card-account-details
   palette:
     # Dark mode default (fits your tone)
     scheme: slate
