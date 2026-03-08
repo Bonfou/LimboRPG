@@ -9,6 +9,6 @@ First, you must determine your character's history. This is done through the Bac
 ## 2. [Your Stats](../02_Character_Creation/02.2_Stats)
 Next, you must determine your stats; namely, your Attributes, Approaches, and Skills. Assign your standard array (**0, 1, 1, 2, 2, 3**) to determine your proficiency in the nine Skills used during narrative play.
 ## 3. [Your Class](../02_Character_Creation/02.3_Class)
-Determining your Class is the next step in character creation. You may choose one of the [Classes](../03_Classes/index) and invest your starting Cred into Moves.
+Determining your Class is the next step in character creation. You may choose one of the [Classes](../03_Classes/index) and invest your starting Cred (2 Fight Cred and 2 Hustle Cred) into Moves.
 ## 4. [Your Equipment](../02_Character_Creation/02.4_Gear_and_Cred)
 Finally, you must determine what equipment, biological mutations, and cybernetic augmentations your character has.
