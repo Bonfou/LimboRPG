@@ -165,9 +165,28 @@
   mask-size: contain;
 }
 
-/* --- Modifiers (Colors & Icons) --- */
+/* --- Global Card Text --- */
+/* Forces all text inside cards to white, overriding slate theme defaults */
+.move-card {
+  color: #ffffff; 
+}
+
+/* Forces headers to be white */
+.move-card h3, .move-card h4 {
+  color: #ffffff; 
+  border-bottom: 2px solid; /* Border width, color is defined in modifiers below */
+}
+
+/* Shrinks the stats line to prevent wrapping on 1080p/1440p screens */
+.move-stats {
+  font-size: 0.85em;
+  opacity: 0.9; /* Slightly dims the stats line for better visual hierarchy */
+  margin-bottom: 0.5rem;
+}
+
+/* --- Modifiers (Colors, Icons & Borders) --- */
 .move-card.offensive { border-color: #ef5350; }
-.move-card.offensive h3, .move-card.offensive h4 { color: #ef5350; }
+.move-card.offensive h3, .move-card.offensive h4 { border-bottom-color: #ef5350; }
 .move-card.offensive h3::before, .move-card.offensive h4::before {
   background-color: #ef5350;
   -webkit-mask-image: var(--md-admonition-icon--offensive);
@@ -175,7 +194,7 @@
 }
 
 .move-card.defensive { border-color: #448aff; }
-.move-card.defensive h3, .move-card.defensive h4 { color: #448aff; }
+.move-card.defensive h3, .move-card.defensive h4 { border-bottom-color: #448aff; }
 .move-card.defensive h3::before, .move-card.defensive h4::before {
   background-color: #448aff;
   -webkit-mask-image: var(--md-admonition-icon--defensive);
@@ -183,7 +202,7 @@
 }
 
 .move-card.utility { border-color: #00c853; }
-.move-card.utility h3, .move-card.utility h4 { color: #00c853; }
+.move-card.utility h3, .move-card.utility h4 { border-bottom-color: #00c853; }
 .move-card.utility h3::before, .move-card.utility h4::before {
   background-color: #00c853;
   -webkit-mask-image: var(--md-admonition-icon--utility);
@@ -191,11 +210,19 @@
 }
 
 .move-card.passive { border-color: #ab47bc; }
-.move-card.passive h3, .move-card.passive h4 { color: #ab47bc; }
+.move-card.passive h3, .move-card.passive h4 { border-bottom-color: #ab47bc; }
 .move-card.passive h3::before, .move-card.passive h4::before {
   background-color: #ab47bc;
   -webkit-mask-image: var(--md-admonition-icon--passive);
   mask-image: var(--md-admonition-icon--passive);
+}
+
+.move-card.feature { border-color: #595959; }
+.move-card.feature h3, .move-card.feature h4 { border-bottom-color: #7d7d7d; }
+.move-card.feature h3::before, .move-card.feature h4::before {
+  background-color: #7d7d7d;
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+  mask-image: var(--md-admonition-icon--feature);
 }
 
 /* Ensure tables inside cards fit neatly */
