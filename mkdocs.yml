@@ -20,14 +20,15 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tabs.link
 
 markdown_extensions:
+  - attr_list
   - admonition # For Move Cards/Callouts
   - pymdownx.details # For collapsible text
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
   - tables 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji

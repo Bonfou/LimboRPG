@@ -3,6 +3,7 @@
 .md-typeset table:not([class]) td {
   border-right: 1px solid var(--md-default-fg-color--lightest);
 }
+
 .md-typeset table:not([class]) th:last-child,
 .md-typeset table:not([class]) td:last-child {
   border-right: none;
@@ -21,7 +22,6 @@
 .md-typeset .offensive > .admonition-title::before,
 .md-typeset .offensive > summary::before {
   background-color: #ef5350;
-
   -webkit-mask-image: var(--md-admonition-icon--offensive);
   mask-image: var(--md-admonition-icon--offensive);
 }
@@ -111,26 +111,28 @@
   mask-image: var(--md-admonition-icon--dossier);
 }
 
-.offensive {
+/* --- Custom Text Colors --- */
+.text-offensive {
   color: #ef5350;
   font-weight: bold;
 }
 
-.defensive {
+.text-defensive {
   color: #448aff;
   font-weight: bold;
 }
 
-/* --- Move Grid Layout --- */
+/* =========================================================
+   MOVE CARDS & GRID
+   ========================================================= */
+
 .move-grid {
   display: grid;
-  /* Auto-fits cards, meaning they stack on mobile and sit side-by-side on desktop */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
 
-/* --- Base Card Component --- */
 .move-card {
   display: flex;
   flex-direction: column;
@@ -140,21 +142,27 @@
   box-shadow: var(--md-shadow-z1);
   padding: 1rem;
   overflow: hidden;
+  font-weight: normal; 
+  color: var(--md-default-fg-color);
+  scroll-margin-top: 5rem; /* Ensures the header doesn't cover the card when jumping */
 }
 
-/* --- Card Header (Move Name) --- */
-.move-card h3, .move-card h4 {
+/* Headers inside cards */
+.md-typeset .move-card h3, 
+.md-typeset .move-card h4 {
   margin-top: 0;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid currentColor;
+  border-bottom: 2px solid; 
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
+  color: var(--md-default-fg-color); 
 }
 
-/* Base pseudo-element for the icon */
-.move-card h3::before, .move-card h4::before {
+/* Icons via Mask-Image */
+.md-typeset .move-card h3::before, 
+.md-typeset .move-card h4::before {
   content: "";
   display: inline-block;
   width: 1.2em;
@@ -163,78 +171,70 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   mask-size: contain;
+  background-color: currentColor;
 }
 
-/* --- Global Card Text --- */
-/* Forces all text inside cards to white, overriding slate theme defaults */
-.move-card {
-  color: #ffffff; 
-}
-
-/* Forces headers to be white */
-.move-card h3, .move-card h4 {
-  color: #ffffff; 
-  border-bottom: 2px solid; /* Border width, color is defined in modifiers below */
-}
-
-/* Shrinks the stats line to prevent wrapping on 1080p/1440p screens */
+/* Stats Line Styling */
 .move-stats {
-  font-size: 0.85em;
-  opacity: 0.9; /* Slightly dims the stats line for better visual hierarchy */
+  font-size: 0.8em;
+  opacity: 0.8; 
   margin-bottom: 0.5rem;
 }
 
-/* --- Modifiers (Colors, Icons & Borders) --- */
+/* =========================================================
+   BADGES & MODIFIERS
+   ========================================================= */
+
+.type-badge {
+  font-size: 0.6em;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+/* Offensive */
 .move-card.offensive { border-color: #ef5350; }
-.move-card.offensive h3, .move-card.offensive h4 { border-bottom-color: #ef5350; }
-.move-card.offensive h3::before, .move-card.offensive h4::before {
-  background-color: #ef5350;
-  -webkit-mask-image: var(--md-admonition-icon--offensive);
+.move-card.offensive h4 { border-bottom-color: #ef5350; }
+.move-card.offensive h4::before { 
   mask-image: var(--md-admonition-icon--offensive);
+  -webkit-mask-image: var(--md-admonition-icon--offensive); 
 }
+.type-badge.offensive { background-color: rgba(239, 83, 80, 0.15); color: #ef5350; }
 
+/* Defensive */
 .move-card.defensive { border-color: #448aff; }
-.move-card.defensive h3, .move-card.defensive h4 { border-bottom-color: #448aff; }
-.move-card.defensive h3::before, .move-card.defensive h4::before {
-  background-color: #448aff;
-  -webkit-mask-image: var(--md-admonition-icon--defensive);
+.move-card.defensive h4 { border-bottom-color: #448aff; }
+.move-card.defensive h4::before { 
   mask-image: var(--md-admonition-icon--defensive);
+  -webkit-mask-image: var(--md-admonition-icon--defensive); 
 }
+.type-badge.defensive { background-color: rgba(68, 138, 255, 0.15); color: #448aff; }
 
+/* Utility */
 .move-card.utility { border-color: #00c853; }
-.move-card.utility h3, .move-card.utility h4 { border-bottom-color: #00c853; }
-.move-card.utility h3::before, .move-card.utility h4::before {
-  background-color: #00c853;
-  -webkit-mask-image: var(--md-admonition-icon--utility);
+.move-card.utility h4 { border-bottom-color: #00c853; }
+.move-card.utility h4::before { 
   mask-image: var(--md-admonition-icon--utility);
+  -webkit-mask-image: var(--md-admonition-icon--utility); 
 }
+.type-badge.utility { background-color: rgba(0, 200, 83, 0.15); color: #00c853; }
 
+/* Passive */
 .move-card.passive { border-color: #ab47bc; }
-.move-card.passive h3, .move-card.passive h4 { border-bottom-color: #ab47bc; }
-.move-card.passive h3::before, .move-card.passive h4::before {
-  background-color: #ab47bc;
-  -webkit-mask-image: var(--md-admonition-icon--passive);
+.move-card.passive h4 { border-bottom-color: #ab47bc; }
+.move-card.passive h4::before { 
   mask-image: var(--md-admonition-icon--passive);
+  -webkit-mask-image: var(--md-admonition-icon--passive); 
 }
+.type-badge.passive { background-color: rgba(171, 71, 188, 0.15); color: #ab47bc; }
 
+/* Feature */
 .move-card.feature { border-color: #595959; }
-.move-card.feature h3, .move-card.feature h4 { border-bottom-color: #7d7d7d; }
-.move-card.feature h3::before, .move-card.feature h4::before {
-  background-color: #7d7d7d;
-  -webkit-mask-image: var(--md-admonition-icon--feature);
+.move-card.feature h3 { border-bottom-color: #7d7d7d; }
+.move-card.feature h3::before { 
   mask-image: var(--md-admonition-icon--feature);
+  -webkit-mask-image: var(--md-admonition-icon--feature); 
 }
-
-/* Ensure tables inside cards fit neatly */
-.move-card table {
-  width: 100%;
-  margin-top: auto; /* Pushes table to the bottom if cards in a row have different heights */
-}
-
-.move-card.feature { border-color: #595959; }
-.move-card.feature h3, .move-card.feature h4 { color: #595959; }
-.move-card.feature h3::before, .move-card.feature h4::before {
-  background-color: #7d7d7d;
-  -webkit-mask-image: var(--md-admonition-icon--feature);
-  mask-image: var(--md-admonition-icon--feature);
-}
+.type-badge.feature { background-color: rgba(125, 125, 125, 0.15); color: #cfd8dc; }
