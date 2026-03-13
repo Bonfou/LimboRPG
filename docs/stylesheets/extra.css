@@ -203,3 +203,11 @@
   width: 100%;
   margin-top: auto; /* Pushes table to the bottom if cards in a row have different heights */
 }
+
+.move-card.feature { border-color: #595959; }
+.move-card.feature h3, .move-card.feature h4 { color: #595959; }
+.move-card.feature h3::before, .move-card.feature h4::before {
+  background-color: #7d7d7d;
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+  mask-image: var(--md-admonition-icon--feature);
+}
