@@ -247,3 +247,28 @@
   -webkit-mask-image: var(--md-admonition-icon--feature); 
 }
 .type-badge.feature { background-color: rgba(125, 125, 125, 0.15); color: #cfd8dc; }
+
+/* =========================================================
+   Widen Overall Site Layout
+   ========================================================= */
+
+/* Set a new, wider maximum width for the whole content container (Central page + both sidebars combined) */
+.md-main__inner {
+  max-width: 1600px; /* Default is approximately 1220px. Adjust this number as needed. e.g., 1400px, 1600px */
+  margin-left: auto; /* Center the container on the screen */
+  margin-right: auto;
+}
+
+/* Allow the content area itself to expand horizontally */
+.md-content {
+  max-width: none;
+}
+
+/* Keep the sidebars at a reasonable, fixed width within the wider container */
+.md-sidebar--primary {
+  width: 18rem; /* Width for left Navigation - default is ~16rem */
+}
+
+.md-sidebar--secondary {
+  width: 20rem; /* Width for right TOC - slightly wider is better for deep-links */
+}
