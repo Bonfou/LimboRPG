@@ -128,7 +128,7 @@
 
 .move-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
@@ -252,23 +252,16 @@
    Widen Overall Site Layout
    ========================================================= */
 
-/* Set a new, wider maximum width for the whole content container (Central page + both sidebars combined) */
-.md-main__inner {
-  max-width: 1600px; /* Default is approximately 1220px. Adjust this number as needed. e.g., 1400px, 1600px */
-  margin-left: auto; /* Center the container on the screen */
-  margin-right: auto;
+/* Expands the master container, organically widening the central text column */
+.md-grid {
+  max-width: 1600px; /* Default is 1220px. Try 1600px, 1800px, or 90vw for ultra-wide */
 }
 
-/* Allow the content area itself to expand horizontally */
-.md-content {
-  max-width: none;
-}
-
-/* Keep the sidebars at a reasonable, fixed width within the wider container */
+/* Optional: Widen the sidebars slightly to match the new massive screen real estate */
 .md-sidebar--primary {
-  width: 18rem; /* Width for left Navigation - default is ~16rem */
+  width: 10rem; /* Left navigation. Default is 12.2rem */
 }
 
 .md-sidebar--secondary {
-  width: 20rem; /* Width for right TOC - slightly wider is better for deep-links */
+  width: 12rem; /* Right TOC */
 }
