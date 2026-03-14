@@ -7,6 +7,7 @@ theme:
       defensive: material/shield
       utility: material/wrench
       passive: material/puzzle
+      trait: material/sd
       feature: material/cog
       dossier: material/card-account-details
   palette:

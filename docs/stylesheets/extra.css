@@ -230,6 +230,15 @@
 }
 .type-badge.passive { background-color: rgba(171, 71, 188, 0.15); color: #ab47bc; }
 
+/* Trait */
+.move-card.trait { border-color: #ffb300; }
+.move-card.trait h4 { border-bottom-color: #ffb300; }
+.move-card.trait h4::before { 
+  mask-image: var(--md-admonition-icon--trait);
+  -webkit-mask-image: var(--md-admonition-icon--trait); 
+}
+.type-badge.trait { background-color: rgba(255, 179, 0, 0.15); color: #ffb300; }
+
 /* Feature */
 .move-card.feature { border-color: #595959; }
 .move-card.feature h3 { border-bottom-color: #7d7d7d; }

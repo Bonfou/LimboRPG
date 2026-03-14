@@ -15,7 +15,8 @@ def define_env(env):
             "offensive": "OFF",
             "defensive": "DEF",
             "utility": "UTL",
-            "passive": "PAS"
+            "passive": "PAS",
+            "trait": "TRT"
         }
         badge_text = type_map.get(type, "")
         badge_html = f'<span class="type-badge {type}">{badge_text}</span>' if badge_text else ""
