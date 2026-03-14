@@ -7,7 +7,9 @@ When you are exploring, socializing, or investigating, the game uses **The Grid*
 
 - Each Attribute and Approach pair creates a Skill.
 - Attributes and Approaches go from 0-5. Skills go from 0-10.
-- To make a check, you roll dice equal to your Skill. Any 5s or 6s count as Successes. 6s count as multiple depending on your Anomaly Tier.
+- To make a check, you roll dice equal to your Skill. Any 4s, 5s, or 6s count as Beats. If you have more Beats than the Difficulty, you pass the Check.
+- If you have more 1s than 6s, you experience a Bane: an additional negative effect.
+- If you have more 6s than 1s, you experience a Boon: an additional positive effect.
 
 ## The Fight
 When you engage in combat with one or more other entities, the game shifts. Unlike most other tabletop RPGs, Limbo uses a completely abstract positioning system -- tracking where you are on the battlefield is simply irrelevant. To make or survive attacks, you rely on the **Clash** system.
