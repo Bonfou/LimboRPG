@@ -57,6 +57,6 @@ If you survive the politics of the Circles and the horrors of the Void, you migh
 
 ## Where to Start?
 
-* :material-book-open-page-variant: **[Core Rules](01_Core_Rules/01.1_The_Basics.md)**: Learn how the Dice Pool and Anomaly Tiers work.
+* :material-book-open-page-variant: **[Core Rules](01_Core_Rules/index.md)**: Learn how the Dice Pool and Anomaly Tiers work.
 * :material-sword: **[The Classes](03_Classes/index.md)**: Choose your path.
 * :material-earth: **[The World](05_The_World/index.md)**: Explore the history of the Heart, the Hand, and the Inhabitants.
