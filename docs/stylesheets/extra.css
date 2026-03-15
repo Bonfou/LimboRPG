@@ -11,14 +11,9 @@
 
 /* --- Custom Admonition: Offensive (Red + Sword) --- */
 .md-typeset .admonition.offensive,
-.md-typeset details.offensive {
-  border-color: #ef5350;
-}
+.md-typeset details.offensive { border-color: #ef5350; }
 .md-typeset .offensive > .admonition-title,
-.md-typeset .offensive > summary {
-  background-color: rgba(239, 83, 80, 0.1);
-  border-color: #ef5350;
-}
+.md-typeset .offensive > summary { background-color: rgba(239, 83, 80, 0.1); border-color: #ef5350; }
 .md-typeset .offensive > .admonition-title::before,
 .md-typeset .offensive > summary::before {
   background-color: #ef5350;
@@ -28,14 +23,9 @@
 
 /* --- Custom Admonition: Defensive (Blue + Shield) --- */
 .md-typeset .admonition.defensive,
-.md-typeset details.defensive {
-  border-color: #448aff;
-}
+.md-typeset details.defensive { border-color: #448aff; }
 .md-typeset .defensive > .admonition-title,
-.md-typeset .defensive > summary {
-  background-color: rgba(68, 138, 255, 0.1);
-  border-color: #448aff;
-}
+.md-typeset .defensive > summary { background-color: rgba(68, 138, 255, 0.1); border-color: #448aff; }
 .md-typeset .defensive > .admonition-title::before,
 .md-typeset .defensive > summary::before {
   background-color: #448aff;
@@ -45,14 +35,9 @@
 
 /* --- Custom Admonition: Utility (Green + Wrench) --- */
 .md-typeset .admonition.utility,
-.md-typeset details.utility {
-  border-color: #00c853;
-}
+.md-typeset details.utility { border-color: #00c853; }
 .md-typeset .utility > .admonition-title,
-.md-typeset .utility > summary {
-  background-color: rgba(0, 200, 83, 0.1);
-  border-color: #00c853;
-}
+.md-typeset .utility > summary { background-color: rgba(0, 200, 83, 0.1); border-color: #00c853; }
 .md-typeset .utility > .admonition-title::before,
 .md-typeset .utility > summary::before {
   background-color: #00c853;
@@ -62,14 +47,9 @@
 
 /* --- Custom Admonition: Passive (Purple + Puzzle) --- */
 .md-typeset .admonition.passive,
-.md-typeset details.passive {
-  border-color: #ab47bc;
-}
+.md-typeset details.passive { border-color: #ab47bc; }
 .md-typeset .passive > .admonition-title,
-.md-typeset .passive > summary {
-  background-color: rgba(171, 71, 188, 0.1);
-  border-color: #ab47bc;
-}
+.md-typeset .passive > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #ab47bc; }
 .md-typeset .passive > .admonition-title::before,
 .md-typeset .passive > summary::before {
   background-color: #ab47bc;
@@ -79,14 +59,9 @@
 
 /* --- Custom Admonition: Feature (Gray + Cog) --- */
 .md-typeset .admonition.feature,
-.md-typeset details.feature {
-  border-color: #595959;
-}
+.md-typeset details.feature { border-color: #595959; }
 .md-typeset .feature > .admonition-title,
-.md-typeset .feature > summary {
-  background-color: rgba(171, 71, 188, 0.1);
-  border-color: #7d7d7d;
-}
+.md-typeset .feature > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #7d7d7d; }
 .md-typeset .feature > .admonition-title::before,
 .md-typeset .feature > summary::before {
   background-color: #7d7d7d;
@@ -96,14 +71,9 @@
 
 /* --- Custom Admonition: Dossier (Silver + ID Card) --- */
 .md-typeset .admonition.dossier,
-.md-typeset details.dossier {
-  border-color: #cfd8dc;
-}
+.md-typeset details.dossier { border-color: #cfd8dc; }
 .md-typeset .dossier > .admonition-title,
-.md-typeset .dossier > summary {
-  background-color: rgba(207, 216, 220, 0.1);
-  border-color: #cfd8dc;
-}
+.md-typeset .dossier > summary { background-color: rgba(207, 216, 220, 0.1); border-color: #cfd8dc; }
 .md-typeset .dossier > .admonition-title::before,
 .md-typeset .dossier > summary::before {
   background-color: #cfd8dc;
@@ -112,15 +82,8 @@
 }
 
 /* --- Custom Text Colors --- */
-.text-offensive {
-  color: #ef5350;
-  font-weight: bold;
-}
-
-.text-defensive {
-  color: #448aff;
-  font-weight: bold;
-}
+.text-offensive { color: #ef5350; font-weight: bold; }
+.text-defensive { color: #448aff; font-weight: bold; }
 
 /* =========================================================
    MOVE CARDS & GRID
@@ -144,12 +107,13 @@
   overflow: hidden;
   font-weight: normal; 
   color: var(--md-default-fg-color);
-  scroll-margin-top: 5rem; /* Ensures the header doesn't cover the card when jumping */
+  scroll-margin-top: 5rem; 
 }
 
 /* Headers inside cards */
 .md-typeset .move-card h3, 
-.md-typeset .move-card h4 {
+.md-typeset .move-card h4,
+.md-typeset .move-card h5 {
   margin-top: 0;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid; 
@@ -162,7 +126,8 @@
 
 /* Icons via Mask-Image */
 .md-typeset .move-card h3::before, 
-.md-typeset .move-card h4::before {
+.md-typeset .move-card h4::before,
+.md-typeset .move-card h5::before {
   content: "";
   display: inline-block;
   width: 1.2em;
@@ -196,8 +161,8 @@
 
 /* Offensive */
 .move-card.offensive { border-color: #ef5350; }
-.move-card.offensive h4 { border-bottom-color: #ef5350; }
-.move-card.offensive h4::before { 
+.move-card.offensive h4, .move-card.offensive h5 { border-bottom-color: #ef5350; }
+.move-card.offensive h4::before, .move-card.offensive h5::before { 
   mask-image: var(--md-admonition-icon--offensive);
   -webkit-mask-image: var(--md-admonition-icon--offensive); 
 }
@@ -205,8 +170,8 @@
 
 /* Defensive */
 .move-card.defensive { border-color: #448aff; }
-.move-card.defensive h4 { border-bottom-color: #448aff; }
-.move-card.defensive h4::before { 
+.move-card.defensive h4, .move-card.defensive h5 { border-bottom-color: #448aff; }
+.move-card.defensive h4::before, .move-card.defensive h5::before { 
   mask-image: var(--md-admonition-icon--defensive);
   -webkit-mask-image: var(--md-admonition-icon--defensive); 
 }
@@ -214,8 +179,8 @@
 
 /* Utility */
 .move-card.utility { border-color: #00c853; }
-.move-card.utility h4 { border-bottom-color: #00c853; }
-.move-card.utility h4::before { 
+.move-card.utility h4, .move-card.utility h5 { border-bottom-color: #00c853; }
+.move-card.utility h4::before, .move-card.utility h5::before { 
   mask-image: var(--md-admonition-icon--utility);
   -webkit-mask-image: var(--md-admonition-icon--utility); 
 }
@@ -223,8 +188,8 @@
 
 /* Passive */
 .move-card.passive { border-color: #ab47bc; }
-.move-card.passive h4 { border-bottom-color: #ab47bc; }
-.move-card.passive h4::before { 
+.move-card.passive h4, .move-card.passive h5 { border-bottom-color: #ab47bc; }
+.move-card.passive h4::before, .move-card.passive h5::before { 
   mask-image: var(--md-admonition-icon--passive);
   -webkit-mask-image: var(--md-admonition-icon--passive); 
 }
@@ -232,8 +197,8 @@
 
 /* Trait */
 .move-card.trait { border-color: #ffb300; }
-.move-card.trait h4 { border-bottom-color: #ffb300; }
-.move-card.trait h4::before { 
+.move-card.trait h4, .move-card.trait h5 { border-bottom-color: #ffb300; }
+.move-card.trait h4::before, .move-card.trait h5::before { 
   mask-image: var(--md-admonition-icon--trait);
   -webkit-mask-image: var(--md-admonition-icon--trait); 
 }
@@ -252,16 +217,14 @@
    Widen Overall Site Layout
    ========================================================= */
 
-/* Expands the master container, organically widening the central text column */
 .md-grid {
-  max-width: 1600px; /* Default is 1220px. Try 1600px, 1800px, or 90vw for ultra-wide */
+  max-width: 1600px; 
 }
 
-/* Optional: Widen the sidebars slightly to match the new massive screen real estate */
 .md-sidebar--primary {
-  width: 10rem; /* Left navigation. Default is 12.2rem */
+  width: 10rem; 
 }
 
 .md-sidebar--secondary {
-  width: 12rem; /* Right TOC */
+  width: 12rem; 
 }
