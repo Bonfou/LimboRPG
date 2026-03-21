@@ -1,0 +1,230 @@
+/* Add vertical lines to tables */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  border-right: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) th:last-child,
+.md-typeset table:not([class]) td:last-child {
+  border-right: none;
+}
+
+/* --- Custom Admonition: Offensive (Red + Sword) --- */
+.md-typeset .admonition.offensive,
+.md-typeset details.offensive { border-color: #ef5350; }
+.md-typeset .offensive > .admonition-title,
+.md-typeset .offensive > summary { background-color: rgba(239, 83, 80, 0.1); border-color: #ef5350; }
+.md-typeset .offensive > .admonition-title::before,
+.md-typeset .offensive > summary::before {
+  background-color: #ef5350;
+  -webkit-mask-image: var(--md-admonition-icon--offensive);
+  mask-image: var(--md-admonition-icon--offensive);
+}
+
+/* --- Custom Admonition: Defensive (Blue + Shield) --- */
+.md-typeset .admonition.defensive,
+.md-typeset details.defensive { border-color: #448aff; }
+.md-typeset .defensive > .admonition-title,
+.md-typeset .defensive > summary { background-color: rgba(68, 138, 255, 0.1); border-color: #448aff; }
+.md-typeset .defensive > .admonition-title::before,
+.md-typeset .defensive > summary::before {
+  background-color: #448aff;
+  -webkit-mask-image: var(--md-admonition-icon--defensive);
+  mask-image: var(--md-admonition-icon--defensive);
+}
+
+/* --- Custom Admonition: Utility (Green + Wrench) --- */
+.md-typeset .admonition.utility,
+.md-typeset details.utility { border-color: #00c853; }
+.md-typeset .utility > .admonition-title,
+.md-typeset .utility > summary { background-color: rgba(0, 200, 83, 0.1); border-color: #00c853; }
+.md-typeset .utility > .admonition-title::before,
+.md-typeset .utility > summary::before {
+  background-color: #00c853;
+  -webkit-mask-image: var(--md-admonition-icon--utility);
+  mask-image: var(--md-admonition-icon--utility);
+}
+
+/* --- Custom Admonition: Passive (Purple + Puzzle) --- */
+.md-typeset .admonition.passive,
+.md-typeset details.passive { border-color: #ab47bc; }
+.md-typeset .passive > .admonition-title,
+.md-typeset .passive > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #ab47bc; }
+.md-typeset .passive > .admonition-title::before,
+.md-typeset .passive > summary::before {
+  background-color: #ab47bc;
+  -webkit-mask-image: var(--md-admonition-icon--passive);
+  mask-image: var(--md-admonition-icon--passive);
+}
+
+/* --- Custom Admonition: Feature (Gray + Cog) --- */
+.md-typeset .admonition.feature,
+.md-typeset details.feature { border-color: #595959; }
+.md-typeset .feature > .admonition-title,
+.md-typeset .feature > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #7d7d7d; }
+.md-typeset .feature > .admonition-title::before,
+.md-typeset .feature > summary::before {
+  background-color: #7d7d7d;
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+  mask-image: var(--md-admonition-icon--feature);
+}
+
+/* --- Custom Admonition: Dossier (Silver + ID Card) --- */
+.md-typeset .admonition.dossier,
+.md-typeset details.dossier { border-color: #cfd8dc; }
+.md-typeset .dossier > .admonition-title,
+.md-typeset .dossier > summary { background-color: rgba(207, 216, 220, 0.1); border-color: #cfd8dc; }
+.md-typeset .dossier > .admonition-title::before,
+.md-typeset .dossier > summary::before {
+  background-color: #cfd8dc;
+  -webkit-mask-image: var(--md-admonition-icon--dossier);
+  mask-image: var(--md-admonition-icon--dossier);
+}
+
+/* --- Custom Text Colors --- */
+.text-offensive { color: #ef5350; font-weight: bold; }
+.text-defensive { color: #448aff; font-weight: bold; }
+
+/* =========================================================
+   MOVE CARDS & GRID
+   ========================================================= */
+
+.move-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.move-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  box-shadow: var(--md-shadow-z1);
+  padding: 1rem;
+  overflow: hidden;
+  font-weight: normal; 
+  color: var(--md-default-fg-color);
+  scroll-margin-top: 5rem; 
+}
+
+/* Headers inside cards */
+.md-typeset .move-card h3, 
+.md-typeset .move-card h4,
+.md-typeset .move-card h5 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: var(--md-default-fg-color); 
+}
+
+/* Icons via Mask-Image */
+.md-typeset .move-card h3::before, 
+.md-typeset .move-card h4::before,
+.md-typeset .move-card h5::before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+}
+
+/* Stats Line Styling */
+.move-stats {
+  font-size: 0.8em;
+  opacity: 0.8; 
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================================
+   BADGES & MODIFIERS
+   ========================================================= */
+
+.type-badge {
+  font-size: 0.6em;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+/* Offensive */
+.move-card.offensive { border-color: #ef5350; }
+.move-card.offensive h4, .move-card.offensive h5 { border-bottom-color: #ef5350; }
+.move-card.offensive h4::before, .move-card.offensive h5::before { 
+  mask-image: var(--md-admonition-icon--offensive);
+  -webkit-mask-image: var(--md-admonition-icon--offensive); 
+}
+.type-badge.offensive { background-color: rgba(239, 83, 80, 0.15); color: #ef5350; }
+
+/* Defensive */
+.move-card.defensive { border-color: #448aff; }
+.move-card.defensive h4, .move-card.defensive h5 { border-bottom-color: #448aff; }
+.move-card.defensive h4::before, .move-card.defensive h5::before { 
+  mask-image: var(--md-admonition-icon--defensive);
+  -webkit-mask-image: var(--md-admonition-icon--defensive); 
+}
+.type-badge.defensive { background-color: rgba(68, 138, 255, 0.15); color: #448aff; }
+
+/* Utility */
+.move-card.utility { border-color: #00c853; }
+.move-card.utility h4, .move-card.utility h5 { border-bottom-color: #00c853; }
+.move-card.utility h4::before, .move-card.utility h5::before { 
+  mask-image: var(--md-admonition-icon--utility);
+  -webkit-mask-image: var(--md-admonition-icon--utility); 
+}
+.type-badge.utility { background-color: rgba(0, 200, 83, 0.15); color: #00c853; }
+
+/* Passive */
+.move-card.passive { border-color: #ab47bc; }
+.move-card.passive h4, .move-card.passive h5 { border-bottom-color: #ab47bc; }
+.move-card.passive h4::before, .move-card.passive h5::before { 
+  mask-image: var(--md-admonition-icon--passive);
+  -webkit-mask-image: var(--md-admonition-icon--passive); 
+}
+.type-badge.passive { background-color: rgba(171, 71, 188, 0.15); color: #ab47bc; }
+
+/* Trait */
+.move-card.trait { border-color: #ffb300; }
+.move-card.trait h4, .move-card.trait h5 { border-bottom-color: #ffb300; }
+.move-card.trait h4::before, .move-card.trait h5::before { 
+  mask-image: var(--md-admonition-icon--trait);
+  -webkit-mask-image: var(--md-admonition-icon--trait); 
+}
+.type-badge.trait { background-color: rgba(255, 179, 0, 0.15); color: #ffb300; }
+
+/* Feature */
+.move-card.feature { border-color: #595959; }
+.move-card.feature h3 { border-bottom-color: #7d7d7d; }
+.move-card.feature h3::before { 
+  mask-image: var(--md-admonition-icon--feature);
+  -webkit-mask-image: var(--md-admonition-icon--feature); 
+}
+.type-badge.feature { background-color: rgba(125, 125, 125, 0.15); color: #cfd8dc; }
+
+/* =========================================================
+   Widen Overall Site Layout
+   ========================================================= */
+
+.md-grid {
+  max-width: 1600px; 
+}
+
+.md-sidebar--primary {
+  width: 10rem; 
+}
+
+.md-sidebar--secondary {
+  width: 12rem; 
+}

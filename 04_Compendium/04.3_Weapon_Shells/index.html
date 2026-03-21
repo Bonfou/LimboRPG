@@ -1,0 +1,3784 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../04.2_Keywords/">
+      
+      
+        <link rel="next" href="../04.4_Weapon_Mods/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Weapon Shells - Limbo RPG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--offensive:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M6.92%205H5l9%209%201-.94m4.96%206.06-.84.84a.996.996%200%200%201-1.41%200l-3.12-3.12-2.68%202.66-1.41-1.41%201.42-1.42L3%207.75V3h4.75l8.92%208.92%201.42-1.42%201.41%201.41-2.67%202.67%203.12%203.12c.4.4.4%201.03.01%201.42%22/%3E%3C/svg%3E');--md-admonition-icon--defensive:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%201%203%205v6c0%205.55%203.84%2010.74%209%2012%205.16-1.26%209-6.45%209-12V5z%22/%3E%3C/svg%3E');--md-admonition-icon--utility:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m22.7%2019-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9%206%206%209%201.6%204.7C.4%207.1.9%2010.1%202.9%2012.1c1.9%201.9%204.6%202.4%206.9%201.5l9.1%209.1c.4.4%201%20.4%201.4%200l2.3-2.3c.5-.4.5-1.1.1-1.4%22/%3E%3C/svg%3E');--md-admonition-icon--passive:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M20.5%2011H19V7a2%202%200%200%200-2-2h-4V3.5A2.5%202.5%200%200%200%2010.5%201%202.5%202.5%200%200%200%208%203.5V5H4a2%202%200%200%200-2%202v3.8h1.5c1.5%200%202.7%201.2%202.7%202.7S5%2016.2%203.5%2016.2H2V20a2%202%200%200%200%202%202h3.8v-1.5c0-1.5%201.2-2.7%202.7-2.7s2.7%201.2%202.7%202.7V22H17a2%202%200%200%200%202-2v-4h1.5a2.5%202.5%200%200%200%202.5-2.5%202.5%202.5%200%200%200-2.5-2.5%22/%3E%3C/svg%3E');--md-admonition-icon--trait:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M18%208h-2V4h2m-3%204h-2V4h2m-3%204h-2V4h2m6-2h-8L4%208v12a2%202%200%200%200%202%202h12a2%202%200%200%200%202-2V4a2%202%200%200%200-2-2%22/%3E%3C/svg%3E');--md-admonition-icon--feature:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2015.5A3.5%203.5%200%200%201%208.5%2012%203.5%203.5%200%200%201%2012%208.5a3.5%203.5%200%200%201%203.5%203.5%203.5%203.5%200%200%201-3.5%203.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49%201c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506%200%200%200%2014%202h-4c-.25%200-.46.18-.5.42l-.37%202.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49%200-.61.22l-2%203.46c-.13.22-.07.49.12.64L4.57%2011c-.04.34-.07.67-.07%201s.03.65.07.97l-2.11%201.66c-.19.15-.25.42-.12.64l2%203.46c.12.22.39.3.61.22l2.49-1.01c.52.4%201.06.74%201.69.99l.37%202.65c.04.24.25.42.5.42h4c.25%200%20.46-.18.5-.42l.37-2.65c.63-.26%201.17-.59%201.69-.99l2.49%201.01c.22.08.49%200%20.61-.22l2-3.46c.12-.22.07-.49-.12-.64z%22/%3E%3C/svg%3E');--md-admonition-icon--dossier:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M2%203h20c1.05%200%202%20.95%202%202v14c0%201.05-.95%202-2%202H2c-1.05%200-2-.95-2-2V5c0-1.05.95-2%202-2m12%203v1h8V6zm0%202v1h8V8zm0%202v1h7v-1zm-6%203.91C6%2013.91%202%2015%202%2017v1h12v-1c0-2-4-3.09-6-3.09M8%206a3%203%200%200%200-3%203%203%203%200%200%200%203%203%203%203%200%200%200%203-3%203%203%200%200%200-3-3%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#weapon-shells" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Limbo RPG" class="md-header__button md-logo" aria-label="Limbo RPG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Limbo RPG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Weapon Shells
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_Core_Rules/" class="md-tabs__link">
+          
+  
+  
+  01 Core Rules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_Character_Creation/" class="md-tabs__link">
+          
+  
+  
+  02 Character Creation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_Classes/" class="md-tabs__link">
+          
+  
+  
+  03 Classes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  04 Compendium
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05_The_World/" class="md-tabs__link">
+          
+  
+  
+  05 The World
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../06_Game_Mastering/" class="md-tabs__link">
+          
+  
+  
+  06 Game Mastering
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Limbo RPG" class="md-nav__button md-logo" aria-label="Limbo RPG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Limbo RPG
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 Core Rules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 Core Rules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.1_The_Hustle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Hustle (Narrative)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.2_The_Fight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Fight (Combat)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.3_The_Economy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Economy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.4_Scaling_and_Quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaling and Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.5_Weapons_Armor_and_Mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weapons, Armor, and Mods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Core_Rules/01.6_Move_Anatomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Move Anatomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 Character Creation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 Character Creation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Character Creation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/02.1_Background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02.1 Background
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/02.2_Stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/02.3_Class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02.3 Class
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/02.4_Gear_and_Cred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02.4 Gear and Cred
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_Character_Creation/02.4_Leveling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leveling and Progression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/03.0_Template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [Class Name]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/03.1_Operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/03.2_Nitro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nitro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/03.3_Lux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03.3 Lux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Classes/03.4_Graft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03.4 Graft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 Compendium
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 Compendium
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.1_Statuses_and_Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04.1 Statuses and Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.2_Keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keywords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weapon Shells
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weapon Shells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#melee-weapon-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melee Weapon Shells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Melee Weapon Shells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unarmed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unarmed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-flow-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Flow State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Flow State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-jab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-haymaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Haymaker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-brace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-lacerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Lacerate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Lacerate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-quick-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Slash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-cleave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-riposte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riposte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bludgeons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bludgeons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-crush-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Crush Defense
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Crush Defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-smash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-shattering-blow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shattering Blow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heavy-weapons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heavy Weapons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-unstoppable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Unstoppable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Unstoppable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-sunder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sunder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-wide-swing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wide Swing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-heft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heft
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-parry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Parry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Parry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-shield-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shield Bash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-brace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-redirect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redirect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranged-weapon-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranged Weapon Shells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ranged Weapon Shells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handgun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handgun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-quick-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Quick Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Quick Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-flurry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flurry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-deadeye" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deadeye
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-tactical-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tactical Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rifle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rifle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-precise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Precise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Precise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-aimed-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aimed Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-center-mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Center Mass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-counter-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter-Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-weapons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support Weapons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Suppression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Suppression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-pin-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pin Down
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-spray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spray
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-covering-fire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Covering Fire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shotguns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shotguns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-punch-through" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Punch Through
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Punch Through">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-slug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-duck-and-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duck and Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-siege-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Siege Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Siege Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-bunker-buster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bunker Buster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-heavy-caliber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heavy Caliber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-hunker-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hunker Down
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Template
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-feature-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Feature Name
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Feature Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.4_Weapon_Mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weapon Mods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.5_Armor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Armor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.6_Armor_Mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Armor Mods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.7_Items_and_Consumables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04.7 Items and Consumables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.8_Universal_Hustle_Moves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Universal Hustle Moves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.9_Wound_Table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04.9 Wound Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 The World
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    05 The World
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_The_World/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_The_World/05.1_The_City/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The City of Limbo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_The_World/05.2_The_Hand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Head, The Hand, and The Law
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_The_World/05.3_Life_in_Limbo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life in Limbo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 Game Mastering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    06 Game Mastering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_Game_Mastering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_Game_Mastering/06.1_Running_Limbo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06.1 Running Limbo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_Game_Mastering/06.2_NPC_Creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NPC Creation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_Game_Mastering/06.3_Bestiary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06.3 Bestiary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_Game_Mastering/06.4_Loot_Tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06.4 Loot Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#melee-weapon-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Melee Weapon Shells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Melee Weapon Shells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unarmed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unarmed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-flow-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Flow State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Flow State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-jab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-haymaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Haymaker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-brace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-lacerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Lacerate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Lacerate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-quick-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Slash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-cleave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-riposte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riposte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bludgeons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bludgeons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-crush-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Crush Defense
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Crush Defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-smash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-shattering-blow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shattering Blow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-guard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heavy-weapons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heavy Weapons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-unstoppable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Unstoppable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Unstoppable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-sunder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sunder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-wide-swing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wide Swing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-heft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heft
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-parry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Parry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Parry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-shield-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shield Bash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-brace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-redirect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redirect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranged-weapon-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ranged Weapon Shells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ranged Weapon Shells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handgun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handgun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-quick-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Quick Action
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Quick Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-flurry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flurry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-deadeye" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deadeye
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-tactical-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tactical Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rifle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rifle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-precise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Precise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Precise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-aimed-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aimed Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-center-mass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Center Mass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-counter-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter-Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-weapons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support Weapons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Suppression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Suppression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-pin-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pin Down
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-spray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spray
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-covering-fire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Covering Fire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shotguns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shotguns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-punch-through" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Punch Through
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Punch Through">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-slug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slug
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-duck-and-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duck and Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-siege-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Siege Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Siege Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-bunker-buster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bunker Buster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-heavy-caliber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heavy Caliber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-hunker-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hunker Down
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Template
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feat-feature-feature-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature: Feature Name
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature: Feature Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-move-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="weapon-shells">Weapon Shells</h1>
+<div class="admonition note">
+<p class="admonition-title"><code>W</code> values</p>
+<p>In this document, wherever you see <code>W</code>, it represents the number of weapons of that shell you're wielding. For example, if you're wielding two handguns, <code>W</code> is equal to 2 for all Handgun abilities.</p>
+</div>
+<h2 id="melee-weapon-shells">Melee Weapon Shells</h2>
+<h3 id="unarmed">Unarmed</h3>
+<p>1-Handed</p>
+<p><em>Bare fists, brass knuckles, and heavy tails.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-flow-state"><span class="type-badge feature">FEA</span> Feature: Flow State</h3>
+<p>The first <em>W</em> times you generate EP during your turn, generate <strong>1</strong> additional EP.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-jab"><span class="type-badge offensive">OFF</span> Jab</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Flow 1</strong>.</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-haymaker"><span class="type-badge offensive">OFF</span> Haymaker</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 25 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 2</p>
+</div>
+<p><em>No additional effects.</em></p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-brace"><span class="type-badge defensive">DEF</span> Brace</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>On Break:</strong> This Move gains <strong>Flow 2</strong>.</p>
+</div>
+</div>
+<hr />
+<h3 id="blades">Blades</h3>
+<p>1-Handed</p>
+<p><em>Knives, swords, axes, and daggers.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-lacerate"><span class="type-badge feature">FEA</span> Feature: Lacerate</h3>
+<p>The first <em>W</em> times you score a Win in a Clash each round, apply <strong>2</strong> stacks of <strong><a href="../04.1_Statuses_and_Conditions/#bleed">Bleed</a></strong>.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-quick-slash"><span class="type-badge offensive">OFF</span> Quick Slash</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Afflict <a href="../04.1_Statuses_and_Conditions/#bleed">Bleed</a> 1</strong>.</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-cleave"><span class="type-badge offensive">OFF</span> Cleave</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 9 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Bulwark 3</strong>.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-riposte"><span class="type-badge defensive">DEF</span> Riposte</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Vicious</strong>.</p>
+</div>
+</div>
+<hr />
+<h3 id="bludgeons">Bludgeons</h3>
+<p>1-Handed</p>
+<p><em>Bats, pipes, maces, and blackjacks.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-crush-defense"><span class="type-badge feature">FEA</span> Feature: Crush Defense</h3>
+<p>When you score a <strong>Break</strong>, apply <em>3 x W</em> stacks of <strong><a href="../04.1_Statuses_and_Conditions/#tremor">Tremor</a></strong>.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-smash"><span class="type-badge offensive">OFF</span> Smash</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Flow 1</strong>.</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-shattering-blow"><span class="type-badge offensive">OFF</span> Shattering Blow</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 16 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 2</p>
+</div>
+<p><strong>Afflict <a href="../04.1_Statuses_and_Conditions/#tremor">Tremor</a> 3</strong>.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-guard"><span class="type-badge defensive">DEF</span> Guard</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><em>No additional effects.</em></p>
+</div>
+</div>
+<hr />
+<h3 id="heavy-weapons">Heavy Weapons</h3>
+<p>2-Handed</p>
+<p><em>Sledgehammers, power fists, and greatswords.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-unstoppable"><span class="type-badge feature">FEA</span> Feature: Unstoppable</h3>
+<p>Your Moves cannot be Broken on their first <em>W</em> dice.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-sunder"><span class="type-badge offensive">OFF</span> Sunder</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 8 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Flow 1</strong>, <strong>Bulwark 1</strong>.</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-wide-swing"><span class="type-badge offensive">OFF</span> Wide Swing</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 7 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 2</p>
+</div>
+<p><strong>Area 1</strong>.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-heft"><span class="type-badge defensive">DEF</span> Heft</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Bulwark 1</strong>.</p>
+</div>
+</div>
+<hr />
+<h3 id="shields">Shields</h3>
+<p>1-Handed</p>
+<p><em>Riot shields, energy barriers, natural armor.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-parry"><span class="type-badge feature">FEA</span> Feature: Parry</h3>
+<p>The first <em>W</em> times you score a Win using a Defensive Move each Clash, deal <strong>2 True Harm</strong> to the attacker.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-shield-bash"><span class="type-badge offensive">OFF</span> Shield Bash</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Impact</strong>.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-brace"><span class="type-badge defensive">DEF</span> Brace</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>On Win:</strong> <strong>Apply 1 <a href="../04.1_Statuses_and_Conditions/#tremor">Tremor</a></strong> to Self.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-redirect"><span class="type-badge defensive">DEF</span> Redirect</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Intercept</strong>.</p>
+</div>
+</div>
+<hr />
+<h2 id="ranged-weapon-shells">Ranged Weapon Shells</h2>
+<h3 id="handgun">Handgun</h3>
+<p>1-Handed</p>
+<p><em>Pistols, revolvers, and submachine guns.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-quick-action"><span class="type-badge feature">FEA</span> Feature: Quick Action</h3>
+<p>Your first <em>W</em> Moves in a round cost -1 EP, to a minimum of 0.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-flurry"><span class="type-badge offensive">OFF</span> Flurry</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 8 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> -1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p>If this Move cost 0 EP, it gains <strong>Afflict <a href="../04.1_Statuses_and_Conditions/#tremor">Tremor</a> 2</strong>.</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-deadeye"><span class="type-badge offensive">OFF</span> Deadeye</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 9 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p>If this Move cost 0 EP, its <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG is increased to 12.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-tactical-roll"><span class="type-badge defensive">DEF</span> Tactical Roll</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p>If this Move cost 0 EP, it may be used again for 0 EP. This effect may only trigger once per round.</p>
+</div>
+</div>
+<hr />
+<h3 id="rifle">Rifle</h3>
+<p>2-Handed</p>
+<p><em>Automatic assault rifles, marksman rifles, burst-fire rifles.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-precise"><span class="type-badge feature">FEA</span> Feature: Precise</h3>
+<p>If a Move costed EP and scored at least 1 Win, it deals an additional <em>5 x W</em> Harm, added before armor.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-aimed-shot"><span class="type-badge offensive">OFF</span> Aimed Shot</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 10 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Reinforced</strong></p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-center-mass"><span class="type-badge offensive">OFF</span> Center Mass</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><em>No additional effects.</em></p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-counter-shot"><span class="type-badge defensive">DEF</span> Counter-Shot</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 5 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>On Break:</strong> -2 PWR on target's next attack.</p>
+</div>
+</div>
+<hr />
+<h3 id="support-weapons">Support Weapons</h3>
+<p>2-Handed</p>
+<p><em>Flamethrowers, chemical-sprayers, light machine guns.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-suppression"><span class="type-badge feature">FEA</span> Feature: Suppression</h3>
+<p>Whenever you use a Move with <strong><a href="../04.2_Keywords/#area-x">Area</a></strong>, you may choose to do 0 Harm to all targets. If you do, they gain <em>6 x W</em> stacks of <strong><a href="../04.1_Statuses_and_Conditions/#shock">Shock</a></strong>.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-pin-down"><span class="type-badge offensive">OFF</span> Pin Down</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> -1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Afflict <a href="../04.1_Statuses_and_Conditions/#shock">Shock</a> 2.</strong></p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-spray"><span class="type-badge offensive">OFF</span> Spray</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Area 2</strong>.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-covering-fire"><span class="type-badge defensive">DEF</span> Covering Fire</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Intercept</strong>.</p>
+</div>
+</div>
+<hr />
+<h3 id="shotguns">Shotguns</h3>
+<p>2-Handed</p>
+<p><em>Pump-action shotguns, scatterguns, and blunderbusses.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-punch-through"><span class="type-badge feature">FEA</span> Feature: Punch Through</h3>
+<p>Ignore <em>2 x W</em> AV on each target.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-blast"><span class="type-badge offensive">OFF</span> Blast</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 3 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>Flow 3</strong></p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-slug"><span class="type-badge offensive">OFF</span> Slug</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 10 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p>Double this weapon's W for the duration of this Move.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-duck-and-roll"><span class="type-badge defensive">DEF</span> Duck and Roll</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 0</p>
+</div>
+<p><strong>Flow 2</strong></p>
+</div>
+</div>
+<hr />
+<h3 id="cannons">Cannons</h3>
+<p>2-Handed</p>
+<p><em>Anti-material rifles, rocket launchers, and railguns.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-siege-engine"><span class="type-badge feature">FEA</span> Feature: Siege Engine</h3>
+<p>All non-<strong>Innate</strong> Moves gain <strong>Bulwark</strong> <em>3 x W</em>.</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-bunker-buster"><span class="type-badge offensive">OFF</span> Bunker Buster</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 1 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 6 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 25 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 2</p>
+</div>
+<p><strong>Vicious</strong></p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-heavy-caliber"><span class="type-badge offensive">OFF</span> Heavy Caliber</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 12 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>On Win:</strong> Reduce target's AV by 3 for the next Offensive Move targeting them.</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-hunker-down"><span class="type-badge defensive">DEF</span> Hunker Down</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> 2 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> 4 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> 0 // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> 1</p>
+</div>
+<p><strong>On Break:</strong> gain <strong><a href="../04.1_Statuses_and_Conditions/#hidden">Hidden</a></strong>.</p>
+</div>
+</div>
+<hr />
+<h2 id="shell-template">Shell Template</h2>
+<h3 id="shell-name">Shell Name</h3>
+<p>X-Handed</p>
+<p><em>Examples of this weapon type.</em></p>
+<div class="move-card feature">
+<h3 id="feat-feature-feature-name"><span class="type-badge feature">FEA</span> Feature: Feature Name</h3>
+<p>Rules Text</p>
+</div>
+<div class="move-grid">
+<div class="move-card offensive">
+<h4 id="move-move-name"><span class="type-badge offensive">OFF</span> Move Name</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> X</p>
+</div>
+<p>Rules Text</p>
+</div>
+<div class="move-card offensive">
+<h4 id="move-move-name"><span class="type-badge offensive">OFF</span> Move Name</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> X</p>
+</div>
+<p>Rules Text</p>
+</div>
+<div class="move-card defensive">
+<h4 id="move-move-name"><span class="type-badge defensive">DEF</span> Move Name</h4>
+<div class="move-stats">
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m10 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0-5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2M7 10a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> DIE:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> PWR:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M37.6 4.2C28-2.3 15.2-1.1 7 7s-9.3 21-2.8 30.6l112 163.3-99.6 32.3C6.7 236.4 0 245.6 0 256s6.7 19.6 16.6 22.8l103.1 33.4-52.9 100.6c-4.9 9.3-3.2 20.7 4.3 28.1s18.8 9.2 28.1 4.3l100.6-52.9 33.4 103.1c3.2 9.9 12.4 16.6 22.8 16.6s19.6-6.7 22.8-16.6l33.4-103.1 100.6 52.9c9.3 4.9 20.7 3.2 28.1-4.3s9.2-18.8 4.3-28.1l-52.9-100.6 103.1-33.4c9.9-3.2 16.6-12.4 16.6-22.8s-6.7-19.6-16.6-22.8l-106.5-34.5 25.7-70.4c3.2-8.8 1-18.6-5.6-25.2s-16.4-8.8-25.2-5.6l-70.4 25.7-34.5-106.5C275.6 6.7 266.4 0 256 0s-19.6 6.7-22.8 16.6l-32.3 99.6z"/></svg></span> DMG:</strong> X // <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12c0 6.08-4.92 11-11 11S1 18.08 1 12 5.92 1 12 1s11 4.92 11 11M13 4.06c2.13.27 4.07 1.39 5.37 3.1l1.74-1A10 10 0 0 0 13 2zm-9.11 2.1 1.74 1A8.02 8.02 0 0 1 11 4.06V2a10 10 0 0 0-7.11 4.16m-1 9.94 1.73-1a8.03 8.03 0 0 1 0-6.2l-1.73-1a9.86 9.86 0 0 0 0 8.2M11 19.94a8.02 8.02 0 0 1-5.37-3.1l-1.74 1A10 10 0 0 0 11 22zm9.11-2.1-1.74-1a8.02 8.02 0 0 1-5.37 3.1v2c2.85-.29 5.44-1.78 7.11-4.1m1-1.74c1.19-2.6 1.19-5.6 0-8.2l-1.73 1a8.03 8.03 0 0 1 0 6.2zM15 12l-3-5-3 5 3 5z"/></svg></span> EP:</strong> X</p>
+</div>
+<p>Rules Text</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
