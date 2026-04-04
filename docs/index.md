@@ -27,15 +27,8 @@ The rules are simple:
 
 Limbo splits the game into two distinct modes of play, recognizing that negotiating a hostage situation and fighting a psychic demon require different mechanical tools.
 
-### 1. The Narrative Grid
-Outside of combat, you solve problems using **The Grid**—a matrix of Attributes (**Mind, Body, Spirit**) and Approaches (**Force, Flow, Resistance**).
-
-|          |    Power    |    Flow    | Resistance  |
-| :------- | :---------: | :--------: | :---------: |
-| **BODY** |   `Brawn`   |  `Reflex`  |   `Grit`    |
-| **MIND** | `Intellect` |   `Wits`   |   `Focus`   |
-| **SOUL** | `Presence`  | `Instinct` | `Willpower` |
-
+### 1. Narrative Skills
+Outside of combat, you solve problems using Skills. They represent your specific capabilities in the City.
 ### 2. The Combat Loop
 When violence starts, the game shifts to a rigid, tactical framework.
 

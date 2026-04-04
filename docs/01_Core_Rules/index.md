@@ -3,11 +3,10 @@ Limbo is split into two states: **The Hustle** and **The Fight**. Both states us
 !!! warning "Resolution Mechanics"
 	Limbo RPG uses entirely different resolution mechanics for combat rolls and out-of-combat rolls. Your out-of-combat stats won't help you in combat, and vice versa.
 ## The Hustle
-When you are exploring, socializing, or investigating, the game uses **The Grid**. This is a 3x3 grid of Attributes, Approaches, and their associated Skills.
+When you are exploring, socializing, or investigating, the game uses Skills.
 
-- Each Attribute and Approach pair creates a Skill.
-- Attributes and Approaches go from 0-5. Skills go from 0-10.
-- To make a check, you roll dice equal to your Skill. Any 4s, 5s, or 6s count as Beats. If you have more Beats than the Difficulty, you pass the Check.
+- Skills go from 0-5.
+- To make a check, you roll dice equal to your Skill. Any 4s, 5s, or 6s count as Beats. If you have enough Beats, you pass the check.
 - If you have more 1s than 6s, you experience a Bane: an additional negative effect.
 - If you have more 6s than 1s, you experience a Boon: an additional positive effect.
 
