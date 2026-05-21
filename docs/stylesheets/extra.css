@@ -85,15 +85,23 @@
 .text-offensive { color: #ef5350; font-weight: bold; }
 .text-defensive { color: #448aff; font-weight: bold; }
 
+/* --- Keep Lines at reasonable width --- */
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+    max-width: 80ch;
+}
+
 /* =========================================================
    MOVE CARDS & GRID
    ========================================================= */
 
 .move-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1.5rem;
-  margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
 }
 
 .move-card {
