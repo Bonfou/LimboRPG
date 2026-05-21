@@ -86,9 +86,12 @@
 .text-defensive { color: #448aff; font-weight: bold; }
 
 /* --- Keep Lines at reasonable width --- */
-.md-typeset p,
-.md-typeset ul,
-.md-typeset ol {
+/* Restrict main text and admonitions for readability */
+.md-typeset > p,
+.md-typeset > ul,
+.md-typeset > ol,
+.md-typeset > .admonition,
+.md-typeset > details {
     max-width: 80ch;
 }
 
