@@ -10,6 +10,7 @@ theme:
       trait: material/sd
       feature: material/cog
       dossier: material/card-account-details
+      upgrade: material/book-arrow-up
   theme:
   palette:
     # Palette toggle for light mode
@@ -35,11 +36,11 @@ theme:
     - search.highlight
     - content.code.copy
     - content.tabs.link
-    - toc.integrate
-
-toc_depth: 3
+#    - toc.integrate
 
 markdown_extensions:
+  - toc:
+      toc_depth: 3
   - attr_list
   - admonition # For Move Cards/Callouts
   - pymdownx.details # For collapsible text
@@ -54,8 +55,8 @@ markdown_extensions:
 plugins:
   - search
   - macros
-  - minify:
-      minify_html: true
+  # - minify:
+  #    minify_html: true
 
 extra_css:
   - stylesheets/extra.css
