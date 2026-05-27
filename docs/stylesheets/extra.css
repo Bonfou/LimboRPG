@@ -81,18 +81,32 @@
   mask-image: var(--md-admonition-icon--dossier);
 }
 
+/* --- Custom Admonition: Upgrades (Gray + Arrow) --- */
+.md-typeset .admonition.upgrades,
+.md-typeset details.upgrades {border-color: #cfd8dc;}
+.md-typeset .upgrades > .admonition-title,
+.md-typeset .upgrades > summary {background-color: rgba(207, 216, 220, 0.1); border-color: #cfd8dc;}
+    .md-typeset .upgrades > .admonition-title::before,
+    .md-typeset .upgrades > summary::before {
+        background-color: #595959;
+        -webkit-mask-image: var(--md-admonition-icon--upgrade);
+        mask-image: var(--md-admonition-icon--upgrade);
+    }
+
 /* --- Custom Text Colors --- */
 .text-offensive { color: #ef5350; font-weight: bold; }
 .text-defensive { color: #448aff; font-weight: bold; }
 
 /* --- Keep Lines at reasonable width --- */
-/* Restrict main text and admonitions for readability */
-.md-typeset > p,
-.md-typeset > ul,
-.md-typeset > ol,
-.md-typeset > .admonition,
-.md-typeset > details {
+.md-typeset > * {
     max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Let specific elements break out to the full 1600px width */
+.md-typeset > .move-grid {
+    max-width: 100%;
 }
 
 /* =========================================================
@@ -100,26 +114,25 @@
    ========================================================= */
 
 .move-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
-    gap: 1.5rem;
+    column-width: 350px;
+    column-gap: 1.5rem;
     width: 100%;
 }
 
 .move-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.25rem;
-  box-shadow: var(--md-shadow-z1);
-  padding: 1rem;
-  overflow: hidden;
-  font-weight: normal; 
-  color: var(--md-default-fg-color);
-  scroll-margin-top: 5rem; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.25rem;
+    box-shadow: var(--md-shadow-z1);
+    padding: 1rem;
+    overflow: hidden;
+    font-weight: normal;
+    color: var(--md-default-fg-color);
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
 }
-
 /* Headers inside cards */
 .md-typeset .move-card h3, 
 .md-typeset .move-card h4,
@@ -149,12 +162,43 @@
   background-color: currentColor;
 }
 
-/* Stats Line Styling */
+/* =========================================================
+   MOVE STATS
+   ========================================================= */
+
 .move-stats {
-  font-size: 0.8em;
-  opacity: 0.8; 
-  margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap; /* Allows pills to drop to a new line on narrow mobile screens */
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
 }
+
+.stat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: rgba(128, 128, 128, 0.12);
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    color: var(--md-default-fg-color);
+    font-size: 0.85em;
+}
+}
+
+    .stat-pill p {
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        line-height: 1;
+    }
+
+    /* Ensures the bolded text within the pill stands out slightly */
+    .stat-pill strong {
+        font-weight: 700;
+    }
 
 /* =========================================================
    BADGES & MODIFIERS

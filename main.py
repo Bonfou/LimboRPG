@@ -24,9 +24,16 @@ def define_env(env):
         
         stats_html = ""
         if die is not None:
-            stats_html = f'<div class="move-stats" markdown="1">**:material-dice-6: DIE:** {die} // **:material-lightning-bolt: PWR:** {pwr} // **:fontawesome-solid-burst: DMG:** {dmg} // **:material-poker-chip: EP:** {ep}</div>'
+            stats_html = (
+                f'<div class="move-stats" markdown="1">\n'
+                f'<span class="stat-pill">**:material-dice-6: DIE:** {die}</span>\n'
+                f'<span class="stat-pill">**:material-lightning-bolt: PWR:** {pwr}</span>\n'
+                f'<span class="stat-pill">**:fontawesome-solid-burst: DMG:** {dmg}</span>\n'
+                f'<span class="stat-pill">**:material-poker-chip: EP:** {ep}</span>\n'
+                f'</div>'
+            )
         elif cost is not None:
-            stats_html = f'<div class="move-stats" markdown="1">**Cost:** {cost}</div>'
+            stats_html = f'<div class="move-stats" markdown="1"><span class="stat-pill">**Cost:** {cost}</span></div>'
             
         # Dynamically generate the correct number of hashes based on the 'h' parameter
         heading_hashes = '#' * h
