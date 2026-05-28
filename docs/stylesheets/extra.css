@@ -381,3 +381,70 @@
         -webkit-mask-image: var(--md-admonition-icon--upgrade);
         mask-image: var(--md-admonition-icon--upgrade);
     }
+
+/* =========================================================
+   MOVE CARD UPGRADES
+   ========================================================= */
+
+.md-typeset details.card-upgrades {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important; /* Fixes opacity overlap */
+    margin-top: 1rem;
+    padding: 0;
+}
+
+    /* Format Summary */
+    .md-typeset details.card-upgrades > summary {
+        background-color: transparent !important;
+        padding: 0.5rem !important;
+        margin: 0 -0.5rem; /* Pulls hover box slightly wider than text for a clean wrap */
+        font-size: 0.9em;
+        font-weight: 600;
+        color: var(--md-default-fg-color--light); /* Faded until interacted with */
+        border-radius: 0.35rem;
+        box-shadow: none !important;
+        transition: color 0.15s ease, background-color 0.15s ease;
+        display: flex;
+        align-items: center;
+    }
+
+        /* Hover and Open States */
+        .md-typeset details.card-upgrades > summary:hover,
+        .md-typeset details.card-upgrades[open] > summary {
+            color: var(--badge-bg-feature);
+            background-color: rgba(128, 128, 128, 0.08) !important;
+        }
+
+        /* Icon */
+        .md-typeset details.card-upgrades > summary::before {
+            display: block !important;
+            position: static !important;
+            flex-shrink: 0;
+            content: "";
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 0.5rem;
+            background-color: currentColor;
+            -webkit-mask-image: var(--md-admonition-icon--upgrade);
+            mask-image: var(--md-admonition-icon--upgrade);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+        }
+
+        /* Push the chevron to the right */
+        .md-typeset details.card-upgrades > summary::after {
+            background-color: currentColor !important;
+            margin-left: auto !important; /* Forces it to far right of the flex container */
+        }
+
+    /* Body Styling */
+    .md-typeset details.card-upgrades .upgrades-body {
+        padding: 0.5rem 0 0 0.75rem !important;
+        margin-top: 0.25rem;
+        margin-left: 0.6rem; /* Aligns border directly under the center of the icon */
+        border-left: 2px solid rgba(128, 128, 128, 0.2);
+        font-size: 0.9em;
+    }

@@ -8,7 +8,7 @@ def generate_clean_id(title):
 def define_env(env):
     
     @env.macro
-    def move_card(type, title, body, die=None, pwr=None, dmg=None, ep=None, cost=None, h=4):
+    def move_card(type, title, body, die=None, pwr=None, dmg=None, ep=None, cost=None, upgrades=None, h=4):
         # 1. Map Types to Abbreviations and Icons
         type_map = {
             "offensive": ("OFFENSE", ":material-sword:"),
@@ -46,12 +46,29 @@ def define_env(env):
             )
             
         heading_hashes = '#' * h
+        
+# 5. Generate Upgrades HTML natively if provided
+        upgrades_html = ""
+        if upgrades:
+            upgrades_html = f"""
+<details class="card-upgrades" markdown="1">
+<summary>View Upgrades</summary>
+
+<div class="upgrades-body" markdown="1">
+
+{upgrades}
+
+</div>
+
+</details>
+"""
             
-        # 5. Output: Notice the { .card-header } injected into the Markdown heading
+        # 6. Output: Notice the { .card-header } injected into the Markdown heading
         return f"""<div class="move-card {type}" markdown="1">
 {heading_hashes} {badge_html} {title} {corner_badge_html} {{ #{final_id} data-toc-label="{clean_title}" .card-header }}
 {stats_html}
 <div class="card-body" markdown="1">
 {body}
+{upgrades_html}
 </div>
 </div>"""
