@@ -1,101 +1,13 @@
 /* Add vertical lines to tables */
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-  border-right: 1px solid var(--md-default-fg-color--lightest);
+    border-right: 1px solid var(--md-default-fg-color--lightest);
 }
 
-.md-typeset table:not([class]) th:last-child,
-.md-typeset table:not([class]) td:last-child {
-  border-right: none;
-}
-
-/* --- Custom Admonition: Offensive (Red + Sword) --- */
-.md-typeset .admonition.offensive,
-.md-typeset details.offensive { border-color: #ef5350; }
-.md-typeset .offensive > .admonition-title,
-.md-typeset .offensive > summary { background-color: rgba(239, 83, 80, 0.1); border-color: #ef5350; }
-.md-typeset .offensive > .admonition-title::before,
-.md-typeset .offensive > summary::before {
-  background-color: #ef5350;
-  -webkit-mask-image: var(--md-admonition-icon--offensive);
-  mask-image: var(--md-admonition-icon--offensive);
-}
-
-/* --- Custom Admonition: Defensive (Blue + Shield) --- */
-.md-typeset .admonition.defensive,
-.md-typeset details.defensive { border-color: #448aff; }
-.md-typeset .defensive > .admonition-title,
-.md-typeset .defensive > summary { background-color: rgba(68, 138, 255, 0.1); border-color: #448aff; }
-.md-typeset .defensive > .admonition-title::before,
-.md-typeset .defensive > summary::before {
-  background-color: #448aff;
-  -webkit-mask-image: var(--md-admonition-icon--defensive);
-  mask-image: var(--md-admonition-icon--defensive);
-}
-
-/* --- Custom Admonition: Utility (Green + Wrench) --- */
-.md-typeset .admonition.utility,
-.md-typeset details.utility { border-color: #00c853; }
-.md-typeset .utility > .admonition-title,
-.md-typeset .utility > summary { background-color: rgba(0, 200, 83, 0.1); border-color: #00c853; }
-.md-typeset .utility > .admonition-title::before,
-.md-typeset .utility > summary::before {
-  background-color: #00c853;
-  -webkit-mask-image: var(--md-admonition-icon--utility);
-  mask-image: var(--md-admonition-icon--utility);
-}
-
-/* --- Custom Admonition: Passive (Purple + Puzzle) --- */
-.md-typeset .admonition.passive,
-.md-typeset details.passive { border-color: #ab47bc; }
-.md-typeset .passive > .admonition-title,
-.md-typeset .passive > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #ab47bc; }
-.md-typeset .passive > .admonition-title::before,
-.md-typeset .passive > summary::before {
-  background-color: #ab47bc;
-  -webkit-mask-image: var(--md-admonition-icon--passive);
-  mask-image: var(--md-admonition-icon--passive);
-}
-
-/* --- Custom Admonition: Feature (Gray + Cog) --- */
-.md-typeset .admonition.feature,
-.md-typeset details.feature { border-color: #595959; }
-.md-typeset .feature > .admonition-title,
-.md-typeset .feature > summary { background-color: rgba(171, 71, 188, 0.1); border-color: #7d7d7d; }
-.md-typeset .feature > .admonition-title::before,
-.md-typeset .feature > summary::before {
-  background-color: #7d7d7d;
-  -webkit-mask-image: var(--md-admonition-icon--feature);
-  mask-image: var(--md-admonition-icon--feature);
-}
-
-/* --- Custom Admonition: Dossier (Silver + ID Card) --- */
-.md-typeset .admonition.dossier,
-.md-typeset details.dossier { border-color: #cfd8dc; }
-.md-typeset .dossier > .admonition-title,
-.md-typeset .dossier > summary { background-color: rgba(207, 216, 220, 0.1); border-color: #cfd8dc; }
-.md-typeset .dossier > .admonition-title::before,
-.md-typeset .dossier > summary::before {
-  background-color: #cfd8dc;
-  -webkit-mask-image: var(--md-admonition-icon--dossier);
-  mask-image: var(--md-admonition-icon--dossier);
-}
-
-/* --- Custom Admonition: Upgrades (Gray + Arrow) --- */
-.md-typeset .admonition.upgrades,
-.md-typeset details.upgrades {border-color: #cfd8dc;}
-.md-typeset .upgrades > .admonition-title,
-.md-typeset .upgrades > summary {background-color: rgba(207, 216, 220, 0.1); border-color: #cfd8dc;}
-    .md-typeset .upgrades > .admonition-title::before,
-    .md-typeset .upgrades > summary::before {
-        background-color: #595959;
-        -webkit-mask-image: var(--md-admonition-icon--upgrade);
-        mask-image: var(--md-admonition-icon--upgrade);
+    .md-typeset table:not([class]) th:last-child,
+    .md-typeset table:not([class]) td:last-child {
+        border-right: none;
     }
-
-/* --- Custom Text Colors --- */
-.text-offensive { color: #ef5350; font-weight: bold; }
-.text-defensive { color: #448aff; font-weight: bold; }
 
 /* --- Keep Lines at reasonable width --- */
 .md-typeset > * {
@@ -104,7 +16,6 @@
     margin-right: auto;
 }
 
-/* Let specific elements break out to the full 1600px width */
 .md-typeset > .move-grid {
     max-width: 100%;
 }
@@ -112,7 +23,6 @@
 /* =========================================================
    MOVE CARDS & GRID
    ========================================================= */
-
 .move-grid {
     column-width: 350px;
     column-gap: 1.5rem;
@@ -123,71 +33,86 @@
     display: flex;
     flex-direction: column;
     background-color: var(--md-default-bg-color);
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 0.25rem;
+    border: 3px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.35rem;
     box-shadow: var(--md-shadow-z1);
-    padding: 1rem;
     overflow: hidden;
     font-weight: normal;
     color: var(--md-default-fg-color);
+    scroll-margin-top: 5rem;
+    position: relative;
     break-inside: avoid;
     margin-bottom: 1.5rem;
 }
-/* Headers inside cards */
-.md-typeset .move-card h3, 
-.md-typeset .move-card h4,
-.md-typeset .move-card h5 {
-  margin-top: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid; 
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: bold;
-  color: var(--md-default-fg-color); 
+
+/* Full Bleed Flexbox Header */
+.md-typeset .move-card .card-header {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
 }
 
-/* Icons via Mask-Image */
-.md-typeset .move-card h3::before, 
-.md-typeset .move-card h4::before,
-.md-typeset .move-card h5::before {
-  content: "";
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  background-color: currentColor;
+/* Pad the content below the stats */
+.md-typeset .move-card .card-body {
+    padding: 0.75rem 1rem 1rem 1rem;
 }
 
 /* =========================================================
-   MOVE STATS
+   CORNER COST BADGE
    ========================================================= */
-
-.move-stats {
-    display: flex;
-    flex-wrap: wrap; /* Allows pills to drop to a new line on narrow mobile screens */
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.7rem;
+.corner-cost {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #ffb300;
 }
 
-.stat-pill {
+    .corner-cost.icon-only {
+        color: var(--md-default-fg-color--light);
+    }
+
+    .corner-cost strong {
+        font-size: 1.1em;
+        font-weight: 900;
+    }
+
+/* =========================================================
+   SECONDARY STATS BANNER
+   ========================================================= */
+.stats-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: rgba(128, 128, 128, 0.05);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding: 0.4rem 1rem;
+    font-size: 0.8em;
+}
+
+.stat-item {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    background-color: rgba(128, 128, 128, 0.12);
-    border: 1px solid rgba(128, 128, 128, 0.25);
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.25rem;
     color: var(--md-default-fg-color);
-    font-size: 0.85em;
-}
 }
 
-    .stat-pill p {
+    /* Automatically injects // between stats */
+    .stat-item:not(:last-child)::after {
+        content: "//";
+        margin: 0 .8rem;
+        color: var(--md-default-fg-color--lightest);
+        font-weight: 300;
+    }
+
+    .stat-item p {
         margin: 0;
         display: inline-flex;
         align-items: center;
@@ -195,90 +120,207 @@
         line-height: 1;
     }
 
-    /* Ensures the bolded text within the pill stands out slightly */
-    .stat-pill strong {
+    .stat-item strong {
         font-weight: 700;
     }
 
 /* =========================================================
    BADGES & MODIFIERS
    ========================================================= */
-
 .type-badge {
-  font-size: 0.6em;
-  font-weight: 800;
-  padding: 0.15rem 0.4rem;
-  border-radius: 0.25rem;
-  margin-right: 0.4rem;
-  vertical-align: middle;
+    font-size: 0.85em;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.25rem;
+    margin-right: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
+    .type-badge p {
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .type-badge .twemoji {
+        font-size: 1.6em;
+    }
 /* Offensive */
-.move-card.offensive { border-color: #ef5350; }
-.move-card.offensive h4, .move-card.offensive h5 { border-bottom-color: #ef5350; }
-.move-card.offensive h4::before, .move-card.offensive h5::before { 
-  mask-image: var(--md-admonition-icon--offensive);
-  -webkit-mask-image: var(--md-admonition-icon--offensive); 
+    .move-card.offensive .card-header {
+        background-color: rgba(239, 83, 80, 0.15);
+    }
+
+.type-badge.offensive {
+    background-color: #ef5350;
+    color: var(--md-default-bg-color);
 }
-.type-badge.offensive { background-color: rgba(239, 83, 80, 0.15); color: #ef5350; }
 
 /* Defensive */
-.move-card.defensive { border-color: #448aff; }
-.move-card.defensive h4, .move-card.defensive h5 { border-bottom-color: #448aff; }
-.move-card.defensive h4::before, .move-card.defensive h5::before { 
-  mask-image: var(--md-admonition-icon--defensive);
-  -webkit-mask-image: var(--md-admonition-icon--defensive); 
+    .move-card.defensive .card-header {
+        background-color: rgba(68, 138, 255, 0.15);
+    }
+
+.type-badge.defensive {
+    background-color: #448aff;
+    color: var(--md-default-bg-color);
 }
-.type-badge.defensive { background-color: rgba(68, 138, 255, 0.15); color: #448aff; }
 
 /* Utility */
-.move-card.utility { border-color: #00c853; }
-.move-card.utility h4, .move-card.utility h5 { border-bottom-color: #00c853; }
-.move-card.utility h4::before, .move-card.utility h5::before { 
-  mask-image: var(--md-admonition-icon--utility);
-  -webkit-mask-image: var(--md-admonition-icon--utility); 
+    .move-card.utility .card-header {
+        background-color: rgba(0, 200, 83, 0.15);
+    }
+
+.type-badge.utility {
+    background-color: #00c853;
+    color: var(--md-default-bg-color);
 }
-.type-badge.utility { background-color: rgba(0, 200, 83, 0.15); color: #00c853; }
 
 /* Passive */
-.move-card.passive { border-color: #ab47bc; }
-.move-card.passive h4, .move-card.passive h5 { border-bottom-color: #ab47bc; }
-.move-card.passive h4::before, .move-card.passive h5::before { 
-  mask-image: var(--md-admonition-icon--passive);
-  -webkit-mask-image: var(--md-admonition-icon--passive); 
+    .move-card.passive .card-header {
+        background-color: rgba(171, 71, 188, 0.15);
+    }
+
+.type-badge.passive {
+    background-color: #ab47bc;
+    color: var(--md-default-bg-color);
 }
-.type-badge.passive { background-color: rgba(171, 71, 188, 0.15); color: #ab47bc; }
 
 /* Trait */
-.move-card.trait { border-color: #ffb300; }
-.move-card.trait h4, .move-card.trait h5 { border-bottom-color: #ffb300; }
-.move-card.trait h4::before, .move-card.trait h5::before { 
-  mask-image: var(--md-admonition-icon--trait);
-  -webkit-mask-image: var(--md-admonition-icon--trait); 
+    .move-card.trait .card-header {
+        background-color: rgba(255, 179, 0, 0.15);
+    }
+
+.type-badge.trait {
+    background-color: #ffb300;
+    color: var(--md-default-bg-color);
 }
-.type-badge.trait { background-color: rgba(255, 179, 0, 0.15); color: #ffb300; }
 
 /* Feature */
-.move-card.feature { border-color: #595959; }
-.move-card.feature h3 { border-bottom-color: #7d7d7d; }
-.move-card.feature h3::before { 
-  mask-image: var(--md-admonition-icon--feature);
-  -webkit-mask-image: var(--md-admonition-icon--feature); 
+    .move-card.feature .card-header {
+        background-color: rgba(125, 125, 125, 0.15);
+    }
+
+.type-badge.feature {
+    background-color: #595959;
+    color: var(--md-default-bg-color);
 }
-.type-badge.feature { background-color: rgba(125, 125, 125, 0.15); color: #cfd8dc; }
 
 /* =========================================================
-   Widen Overall Site Layout
+   COMPACT PARAGRAPH SPACING
    ========================================================= */
-
-.md-grid {
-  max-width: 1600px; 
+.md-typeset .move-card p,
+.md-typeset .move-card ul {
+    margin-bottom: 0.6rem;
 }
 
-.md-sidebar--primary {
-  width: 10rem; 
+    .md-typeset .move-card p:last-child {
+        margin-bottom: 0;
+    }
+
+/* --- Custom Admonition Colors --- */
+.md-typeset .admonition.offensive, .md-typeset details.offensive {
+    border-color: #ef5350;
 }
 
-.md-sidebar--secondary {
-  width: 12rem; 
+.md-typeset .offensive > .admonition-title, .md-typeset .offensive > summary {
+    background-color: rgba(239, 83, 80, 0.1);
+    border-color: #ef5350;
 }
+
+    .md-typeset .offensive > .admonition-title::before, .md-typeset .offensive > summary::before {
+        background-color: #ef5350;
+        -webkit-mask-image: var(--md-admonition-icon--offensive);
+        mask-image: var(--md-admonition-icon--offensive);
+    }
+
+.md-typeset .admonition.defensive, .md-typeset details.defensive {
+    border-color: #448aff;
+}
+
+.md-typeset .defensive > .admonition-title, .md-typeset .defensive > summary {
+    background-color: rgba(68, 138, 255, 0.1);
+    border-color: #448aff;
+}
+
+    .md-typeset .defensive > .admonition-title::before, .md-typeset .defensive > summary::before {
+        background-color: #448aff;
+        -webkit-mask-image: var(--md-admonition-icon--defensive);
+        mask-image: var(--md-admonition-icon--defensive);
+    }
+
+.md-typeset .admonition.utility, .md-typeset details.utility {
+    border-color: #00c853;
+}
+
+.md-typeset .utility > .admonition-title, .md-typeset .utility > summary {
+    background-color: rgba(0, 200, 83, 0.1);
+    border-color: #00c853;
+}
+
+    .md-typeset .utility > .admonition-title::before, .md-typeset .utility > summary::before {
+        background-color: #00c853;
+        -webkit-mask-image: var(--md-admonition-icon--utility);
+        mask-image: var(--md-admonition-icon--utility);
+    }
+
+.md-typeset .admonition.passive, .md-typeset details.passive {
+    border-color: #ab47bc;
+}
+
+.md-typeset .passive > .admonition-title, .md-typeset .passive > summary {
+    background-color: rgba(171, 71, 188, 0.1);
+    border-color: #ab47bc;
+}
+
+    .md-typeset .passive > .admonition-title::before, .md-typeset .passive > summary::before {
+        background-color: #ab47bc;
+        -webkit-mask-image: var(--md-admonition-icon--passive);
+        mask-image: var(--md-admonition-icon--passive);
+    }
+
+.md-typeset .admonition.feature, .md-typeset details.feature {
+    border-color: #595959;
+}
+
+.md-typeset .feature > .admonition-title, .md-typeset .feature > summary {
+    background-color: rgba(171, 71, 188, 0.1);
+    border-color: #7d7d7d;
+}
+
+    .md-typeset .feature > .admonition-title::before, .md-typeset .feature > summary::before {
+        background-color: #7d7d7d;
+        -webkit-mask-image: var(--md-admonition-icon--feature);
+        mask-image: var(--md-admonition-icon--feature);
+    }
+
+.md-typeset .admonition.dossier, .md-typeset details.dossier {
+    border-color: #cfd8dc;
+}
+
+.md-typeset .dossier > .admonition-title, .md-typeset .dossier > summary {
+    background-color: rgba(207, 216, 220, 0.1);
+    border-color: #cfd8dc;
+}
+
+    .md-typeset .dossier > .admonition-title::before, .md-typeset .dossier > summary::before {
+        background-color: #cfd8dc;
+        -webkit-mask-image: var(--md-admonition-icon--dossier);
+        mask-image: var(--md-admonition-icon--dossier);
+    }
+
+.md-typeset .admonition.upgrades, .md-typeset details.upgrades {
+    border-color: #cfd8dc;
+}
+
+.md-typeset .upgrades > .admonition-title, .md-typeset .upgrades > summary {
+    background-color: rgba(207, 216, 220, 0.1);
+    border-color: #cfd8dc;
+}
+
+    .md-typeset .upgrades > .admonition-title::before, .md-typeset .upgrades > summary::before {
+        background-color: #595959;
+        -webkit-mask-image: var(--md-admonition-icon--upgrade);
+        mask-image: var(--md-admonition-icon--upgrade);
+    }

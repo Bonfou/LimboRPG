@@ -9,54 +9,49 @@ def define_env(env):
     
     @env.macro
     def move_card(type, title, body, die=None, pwr=None, dmg=None, ep=None, cost=None, h=4):
+        # 1. Map Types to Abbreviations and Icons
         type_map = {
-            "offensive": "OFF",
-            "defensive": "DEF",
-            "utility": "UTL",
-            "passive": "PAS",
-            "trait": "TRT"
+            "offensive": ("OFFENSE", ":material-sword:"),
+            "defensive": ("DEFENSE", ":material-shield:"),
+            "utility": ("UTILITY", ":material-wrench:"),
+            "passive": ("PASSIVE", ":material-puzzle:"),
+            "trait": ("TRAIT", ":material-sd:"),
+            "feature": ("FEATURE", ":material-cog:")
         }
-        badge_text = type_map.get(type, "")
-        badge_html = f'<span class="type-badge {type}">{badge_text}</span>' if badge_text else ""
         
+        badge_text, badge_icon = type_map.get(type, ("", ""))
+        
+        # 2. Generate the Enlarged Type Badge with Icon Included
+        badge_html = f'<span class="type-badge {type}" markdown="1">{badge_icon} {badge_text}</span>' if badge_text else ""
+        
+        # 3. Generate the Cost Pill (Only for moves with actual costs)
+        corner_badge_html = ""
+        if ep is not None:
+            corner_badge_html = f'<span class="corner-cost ep-cost" title="EP Cost" markdown="1">:material-poker-chip: **{ep}**</span>'
+        elif cost is not None:
+            corner_badge_html = f'<span class="corner-cost fp-cost" title="FP Cost" markdown="1">**{cost}**</span>'
+            
         clean_title, base_id = generate_clean_id(title)
         final_id = f"move-{base_id}"
         
+        # 4. Generate the Secondary Stats Banner (Flush under header)
         stats_html = ""
         if die is not None:
             stats_html = (
-                f'<div class="move-stats" markdown="1">\n'
-                f'<span class="stat-pill">**:material-dice-6: DIE:** {die}</span>\n'
-                f'<span class="stat-pill">**:material-lightning-bolt: PWR:** {pwr}</span>\n'
-                f'<span class="stat-pill">**:fontawesome-solid-burst: DMG:** {dmg}</span>\n'
-                f'<span class="stat-pill">**:material-poker-chip: EP:** {ep}</span>\n'
+                f'<div class="stats-banner" markdown="1">\n'
+                f'<span class="stat-item">**:material-dice-6: DIE:** {die}</span>\n'
+                f'<span class="stat-item">**:material-lightning-bolt: PWR:** {pwr}</span>\n'
+                f'<span class="stat-item">**:fontawesome-solid-burst: DMG:** {dmg}</span>\n'
                 f'</div>'
             )
-        elif cost is not None:
-            stats_html = f'<div class="move-stats" markdown="1"><span class="stat-pill">**Cost:** {cost}</span></div>'
             
-        # Dynamically generate the correct number of hashes based on the 'h' parameter
         heading_hashes = '#' * h
             
+        # 5. Output: Notice the { .card-header } injected into the Markdown heading
         return f"""<div class="move-card {type}" markdown="1">
-
-{heading_hashes} {badge_html} {title} {{ #{final_id} data-toc-label="{clean_title}" }}
-
+{heading_hashes} {badge_html} {title} {corner_badge_html} {{ #{final_id} data-toc-label="{clean_title}" .card-header }}
 {stats_html}
-
+<div class="card-body" markdown="1">
 {body}
-
-</div>"""
-
-    @env.macro
-    def feature_card(title, body):
-        clean_title, base_id = generate_clean_id(title)
-        final_id = f"feat-{base_id}"
-        
-        return f"""<div class="move-card feature" markdown="1">
-
-### <span class="type-badge feature">FEA</span> {title} {{ #{final_id} data-toc-label="{clean_title}" }}
-
-{body}
-
+</div>
 </div>"""
