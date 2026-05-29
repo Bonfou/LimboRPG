@@ -50,15 +50,48 @@
     --cost-color: #ffb300;
 }
 
-/* Add vertical lines to tables */
-.md-typeset table:not([class]) th,
-.md-typeset table:not([class]) td {
-    border-right: 1px solid var(--md-default-fg-color--lightest);
+/* =========================================================
+   TABLE OPTIMIZATIONS
+   ========================================================= */
+
+/* Zebra Striping */
+.md-typeset table tbody tr:nth-child(2n) {
+    background-color: rgba(128, 128, 128, 0.04);
 }
 
-    .md-typeset table:not([class]) th:last-child,
-    .md-typeset table:not([class]) td:last-child {
-        border-right: none;
+/* Force internal scrolling on the Material wrapper */
+.sticky-matrix .md-typeset__table {
+    max-height: 65vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Sticky Top Header */
+.sticky-matrix table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--md-default-bg-color) !important;
+    box-shadow: 0 2px 0 var(--md-default-fg-color--lightest);
+    border-bottom: none !important;
+}
+
+    /* Sticky First Column */
+    .sticky-matrix table tbody td:first-child,
+    .sticky-matrix table thead th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background-color: var(--md-default-bg-color) !important;
+        font-weight: bold;
+        box-shadow: 2px 0 0 var(--md-default-fg-color--lightest);
+        border-right: none !important;
+    }
+
+    /* Corner Cell */
+    .sticky-matrix table thead th:first-child {
+        z-index: 3;
+        box-shadow: 2px 2px 0 var(--md-default-fg-color--lightest);
     }
 
 /* --- Keep Lines at reasonable width --- */
