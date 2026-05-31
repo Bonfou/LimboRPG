@@ -15,7 +15,7 @@ When you engage in combat with one or more other entities, the game shifts. Unli
 
 - There are no passive armor classes. All attack rolls are contested rolls between the attacker and defender.
 - Combat is brutal. If you don't use all your tools effectively, you will die.
-- Eliminate the opposition while managing your Focus Points (EP) and Allegiance Actions.
+- Eliminate the opposition while managing your Focus Points ({{EP}}) and Allegiance Actions.
 
 ## Anomaly Tiers
 

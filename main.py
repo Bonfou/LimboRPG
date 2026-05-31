@@ -77,7 +77,7 @@ def define_env(env):
         'DMG': '<span class="inline-stat">:fontawesome-solid-burst: <strong>DMG</strong></span>',
         'PWR': '<span class="inline-stat">:material-lightning-bolt: <strong>PWR</strong></span>',
         'DIE': '<span class="inline-stat">:material-dice-6: <strong>DIE</strong></span>',
-        'EP':  '<span class="inline-stat">:material-poker-chip: <strong>EP</strong></span>',
+        'EP':  '<span class="inline-stat">:material-hexagon-slice-6: <strong>EP</strong></span>',
         'FP':  '<span class="inline-stat">:material-star-four-points: <strong>FP</strong></span>'
     }
     
