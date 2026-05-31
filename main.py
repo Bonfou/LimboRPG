@@ -9,7 +9,7 @@ def define_env(env):
     
     @env.macro
     def move_card(type, title, body, die=None, pwr=None, dmg=None, ep=None, cost=None, upgrades=None, h=4):
-        # 1. Map Types to Abbreviations and Icons
+        # Map Types to Abbreviations and Icons
         type_map = {
             "offensive": ("OFFENSE", ":material-sword:"),
             "defensive": ("DEFENSE", ":material-shield:"),
@@ -21,20 +21,20 @@ def define_env(env):
         
         badge_text, badge_icon = type_map.get(type, ("", ""))
         
-        # 2. Generate the Enlarged Type Badge with Icon Included
+        # Generate the Enlarged Type Badge with Icon Included
         badge_html = f'<span class="type-badge {type}" markdown="1">{badge_icon} {badge_text}</span>' if badge_text else ""
         
-        # 3. Generate the Cost Pill (Only for moves with actual costs)
+        # Generate the Cost Pill (Only for moves with actual costs)
         corner_badge_html = ""
         if ep is not None:
-            corner_badge_html = f'<span class="corner-cost ep-cost" title="EP Cost" markdown="1">:material-poker-chip: **{ep}**</span>'
+            corner_badge_html = f'<span class="corner-cost ep-cost" title="EP Cost" markdown="1">:material-hexagon-slice-6: **{ep}**</span>'
         elif cost is not None:
             corner_badge_html = f'<span class="corner-cost fp-cost" title="FP Cost" markdown="1">:material-star-four-points: **{cost}**</span>'
             
         clean_title, base_id = generate_clean_id(title)
         final_id = f"move-{base_id}"
         
-        # 4. Generate the Secondary Stats Banner (Flush under header)
+        # Generate the Secondary Stats Banner (Flush under header)
         stats_html = ""
         if die is not None:
             stats_html = (
@@ -47,7 +47,7 @@ def define_env(env):
             
         heading_hashes = '#' * h
         
-# 5. Generate Upgrades HTML natively if provided
+# Generate Upgrades HTML natively if provided
         upgrades_html = ""
         if upgrades:
             upgrades_html = f"""
@@ -72,3 +72,13 @@ def define_env(env):
 {upgrades_html}
 </div>
 </div>"""
+
+    core_stats = {
+        'DMG': '<span class="inline-stat">:fontawesome-solid-burst: <strong>DMG</strong></span>',
+        'PWR': '<span class="inline-stat">:material-lightning-bolt: <strong>PWR</strong></span>',
+        'DIE': '<span class="inline-stat">:material-dice-6: <strong>DIE</strong></span>',
+        'EP':  '<span class="inline-stat">:material-poker-chip: <strong>EP</strong></span>',
+        'FP':  '<span class="inline-stat">:material-star-four-points: <strong>FP</strong></span>'
+    }
+    
+    env.variables.update(core_stats)

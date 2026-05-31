@@ -479,5 +479,22 @@
         margin-top: 0.25rem;
         margin-left: 0.6rem; /* Aligns border directly under the center of the icon */
         border-left: 2px solid rgba(128, 128, 128, 0.2);
-        font-size: 0.9em;
+        font-size: 1em;
     }
+
+/* =========================================================
+   INLINE STAT STYLING
+   ========================================================= */
+.md-typeset .inline-stat {
+    white-space: nowrap;
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset .inline-stat strong {
+    font-family: var(--md-code-font-family);
+}
+
+.md-typeset .inline-stat .twemoji {
+    transform: scale(.92);
+    vertical-align: -0.25em;
+}
