@@ -29,7 +29,7 @@ def define_env(env):
         if ep is not None:
             corner_badge_html = f'<span class="corner-cost ep-cost" title="EP Cost" markdown="1">:material-poker-chip: **{ep}**</span>'
         elif cost is not None:
-            corner_badge_html = f'<span class="corner-cost fp-cost" title="FP Cost" markdown="1">**{cost}**</span>'
+            corner_badge_html = f'<span class="corner-cost fp-cost" title="FP Cost" markdown="1">:material-star-four-points: **{cost}**</span>'
             
         clean_title, base_id = generate_clean_id(title)
         final_id = f"move-{base_id}"
