@@ -1,0 +1,500 @@
+/* =========================================================
+   LIGHT MODE (DEFAULT) VARIABLES
+   ========================================================= */
+:root {
+    /* Badge Backgrounds (Darker to contrast with white text) */
+    --badge-bg-offense: #c62828;
+    --badge-bg-defense: #1565c0;
+    --badge-bg-utility: #2e7d32;
+    --badge-bg-passive: #6a1b9a;
+    --badge-bg-trait: #e65100;
+    --badge-bg-feature: #424242;
+    --badge-bg-dossier: #78909c;
+    /* Badge Text (White for high contrast) */
+    --badge-text-color: #ffffff;
+    /* Header Backgrounds (Light transparent overlays) */
+    --header-bg-offense: rgba(198, 40, 40, 0.08);
+    --header-bg-defense: rgba(21, 101, 192, 0.08);
+    --header-bg-utility: rgba(46, 125, 50, 0.08);
+    --header-bg-passive: rgba(106, 27, 154, 0.08);
+    --header-bg-trait: rgba(230, 81, 0, 0.08);
+    --header-bg-feature: rgba(66, 66, 66, 0.08);
+    --header-bg-dossier: rgba(120, 144, 156, 0.08);
+    /* EP/FP Cost Text (Dark amber/orange to stand out on light backgrounds) */
+    --cost-color: #c04000;
+}
+
+/* =========================================================
+   DARK MODE (SLATE) VARIABLES
+   ========================================================= */
+[data-md-color-scheme="slate"] {
+    /* Badge Backgrounds (Lighter/vibrant to contrast with dark text) */
+    --badge-bg-offense: #ef5350;
+    --badge-bg-defense: #448aff;
+    --badge-bg-utility: #00c853;
+    --badge-bg-passive: #ab47bc;
+    --badge-bg-trait: #ffb300;
+    --badge-bg-feature: #9e9e9e;
+    --badge-bg-dossier: #cfd8dc;
+    /* Badge Text (Dark for high contrast) */
+    --badge-text-color: #000000;
+    /* Header Backgrounds (Dark transparent overlays) */
+    --header-bg-offense: rgba(239, 83, 80, 0.15);
+    --header-bg-defense: rgba(68, 138, 255, 0.15);
+    --header-bg-utility: rgba(0, 200, 83, 0.15);
+    --header-bg-passive: rgba(171, 71, 188, 0.15);
+    --header-bg-trait: rgba(255, 179, 0, 0.15);
+    --header-bg-feature: rgba(158, 158, 158, 0.15);
+    --header-bg-dossier: rgba(207, 216, 220, 0.15);
+    /* EP/FP Cost Text (Bright gold to pop on dark backgrounds) */
+    --cost-color: #ffb300;
+}
+
+/* =========================================================
+   TABLE OPTIMIZATIONS
+   ========================================================= */
+
+/* Zebra Striping */
+.md-typeset table tbody tr:nth-child(2n) {
+    background-color: rgba(128, 128, 128, 0.04);
+}
+
+/* Force internal scrolling on the Material wrapper */
+.sticky-matrix .md-typeset__table {
+    max-height: 65vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Sticky Top Header */
+.sticky-matrix table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--md-default-bg-color) !important;
+    box-shadow: 0 2px 0 var(--md-default-fg-color--lightest);
+    border-bottom: none !important;
+}
+
+    /* Sticky First Column */
+    .sticky-matrix table tbody td:first-child,
+    .sticky-matrix table thead th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        background-color: var(--md-default-bg-color) !important;
+        font-weight: bold;
+        box-shadow: 2px 0 0 var(--md-default-fg-color--lightest);
+        border-right: none !important;
+    }
+
+    /* Corner Cell */
+    .sticky-matrix table thead th:first-child {
+        z-index: 3;
+        box-shadow: 2px 2px 0 var(--md-default-fg-color--lightest);
+    }
+
+/* --- Keep Lines at reasonable width --- */
+.md-typeset > * {
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-typeset > .move-grid {
+    max-width: 100%;
+}
+
+/* =========================================================
+   MOVE CARDS & GRID
+   ========================================================= */
+.move-grid {
+    column-width: 350px;
+    column-gap: 1.5rem;
+    width: 100%;
+}
+
+.move-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--md-default-bg-color);
+    border: 3px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.35rem;
+    box-shadow: var(--md-shadow-z1);
+    overflow: hidden;
+    font-weight: normal;
+    color: var(--md-default-fg-color);
+    scroll-margin-top: 5rem;
+    position: relative;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+/* Full Bleed Flexbox Header */
+.md-typeset .move-card .card-header {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
+}
+
+/* Pad the content below the stats */
+.md-typeset .move-card .card-body {
+    padding: 0.75rem 1rem 1rem 1rem;
+}
+
+/* =========================================================
+   CORNER COST BADGE
+   ========================================================= */
+.corner-cost {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--cost-color);
+}
+
+    .corner-cost.icon-only {
+        color: var(--md-default-fg-color--light);
+    }
+
+    .corner-cost strong {
+        font-size: 1.1em;
+        font-weight: 900;
+    }
+
+/* =========================================================
+   SECONDARY STATS BANNER
+   ========================================================= */
+.stats-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: rgba(128, 128, 128, 0.05);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding: 0.4rem 1rem;
+    font-size: 0.8em;
+}
+
+.stat-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--md-default-fg-color);
+}
+
+    .stat-item:not(:last-child)::after {
+        content: "//";
+        margin: 0 .8rem;
+        color: var(--md-default-fg-color--lightest);
+        font-weight: 300;
+    }
+
+    .stat-item p {
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        line-height: 1;
+    }
+
+    .stat-item strong {
+        font-weight: 700;
+    }
+
+/* =========================================================
+   BADGES & MODIFIERS
+   ========================================================= */
+.type-badge {
+    font-size: 0.85em;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.25rem;
+    margin-right: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--badge-text-color);
+}
+
+    .type-badge p {
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .type-badge .twemoji {
+        font-size: 1.6em;
+    }
+
+/* Move Card Headers & Badges */
+.move-card.offensive .card-header {
+    background-color: var(--header-bg-offense);
+}
+
+.type-badge.offensive {
+    background-color: var(--badge-bg-offense);
+}
+
+.move-card.defensive .card-header {
+    background-color: var(--header-bg-defense);
+}
+
+.type-badge.defensive {
+    background-color: var(--badge-bg-defense);
+}
+
+.move-card.utility .card-header {
+    background-color: var(--header-bg-utility);
+}
+
+.type-badge.utility {
+    background-color: var(--badge-bg-utility);
+}
+
+.move-card.passive .card-header {
+    background-color: var(--header-bg-passive);
+}
+
+.type-badge.passive {
+    background-color: var(--badge-bg-passive);
+}
+
+.move-card.trait .card-header {
+    background-color: var(--header-bg-trait);
+}
+
+.type-badge.trait {
+    background-color: var(--badge-bg-trait);
+}
+
+.move-card.feature .card-header {
+    background-color: var(--header-bg-feature);
+}
+
+.type-badge.feature {
+    background-color: var(--badge-bg-feature);
+}
+
+/* =========================================================
+   COMPACT PARAGRAPH SPACING
+   ========================================================= */
+.md-typeset .move-card p,
+.md-typeset .move-card ul {
+    margin-bottom: 0.6rem;
+}
+
+    .md-typeset .move-card p:last-child {
+        margin-bottom: 0;
+    }
+
+/* =========================================================
+   CUSTOM ADMONITION COLORS
+   ========================================================= */
+/* Offensive */
+.md-typeset .admonition.offensive, .md-typeset details.offensive {
+    border-color: var(--badge-bg-offense);
+}
+
+.md-typeset .offensive > .admonition-title, .md-typeset .offensive > summary {
+    background-color: var(--header-bg-offense);
+    border-color: var(--badge-bg-offense);
+}
+
+    .md-typeset .offensive > .admonition-title::before, .md-typeset .offensive > summary::before {
+        background-color: var(--badge-bg-offense);
+        -webkit-mask-image: var(--md-admonition-icon--offensive);
+        mask-image: var(--md-admonition-icon--offensive);
+    }
+
+/* Defensive */
+.md-typeset .admonition.defensive, .md-typeset details.defensive {
+    border-color: var(--badge-bg-defense);
+}
+
+.md-typeset .defensive > .admonition-title, .md-typeset .defensive > summary {
+    background-color: var(--header-bg-defense);
+    border-color: var(--badge-bg-defense);
+}
+
+    .md-typeset .defensive > .admonition-title::before, .md-typeset .defensive > summary::before {
+        background-color: var(--badge-bg-defense);
+        -webkit-mask-image: var(--md-admonition-icon--defensive);
+        mask-image: var(--md-admonition-icon--defensive);
+    }
+
+/* Utility */
+.md-typeset .admonition.utility, .md-typeset details.utility {
+    border-color: var(--badge-bg-utility);
+}
+
+.md-typeset .utility > .admonition-title, .md-typeset .utility > summary {
+    background-color: var(--header-bg-utility);
+    border-color: var(--badge-bg-utility);
+}
+
+    .md-typeset .utility > .admonition-title::before, .md-typeset .utility > summary::before {
+        background-color: var(--badge-bg-utility);
+        -webkit-mask-image: var(--md-admonition-icon--utility);
+        mask-image: var(--md-admonition-icon--utility);
+    }
+
+/* Passive */
+.md-typeset .admonition.passive, .md-typeset details.passive {
+    border-color: var(--badge-bg-passive);
+}
+
+.md-typeset .passive > .admonition-title, .md-typeset .passive > summary {
+    background-color: var(--header-bg-passive);
+    border-color: var(--badge-bg-passive);
+}
+
+    .md-typeset .passive > .admonition-title::before, .md-typeset .passive > summary::before {
+        background-color: var(--badge-bg-passive);
+        -webkit-mask-image: var(--md-admonition-icon--passive);
+        mask-image: var(--md-admonition-icon--passive);
+    }
+
+/* Feature */
+.md-typeset .admonition.feature, .md-typeset details.feature {
+    border-color: var(--badge-bg-feature);
+}
+
+.md-typeset .feature > .admonition-title, .md-typeset .feature > summary {
+    background-color: var(--header-bg-feature);
+    border-color: var(--badge-bg-feature);
+}
+
+    .md-typeset .feature > .admonition-title::before, .md-typeset .feature > summary::before {
+        background-color: var(--badge-bg-feature);
+        -webkit-mask-image: var(--md-admonition-icon--feature);
+        mask-image: var(--md-admonition-icon--feature);
+    }
+
+/* Trait */
+.md-typeset .admonition.trait, .md-typeset details.trait {
+    border-color: var(--badge-bg-trait);
+}
+
+.md-typeset .trait > .admonition-title, .md-typeset .trait > summary {
+    background-color: var(--header-bg-trait);
+    border-color: var(--badge-bg-trait);
+}
+
+    .md-typeset .trait > .admonition-title::before, .md-typeset .trait > summary::before {
+        background-color: var(--badge-bg-trait);
+        -webkit-mask-image: var(--md-admonition-icon--trait);
+        mask-image: var(--md-admonition-icon--trait);
+    }
+
+/* Dossier & Upgrades */
+.md-typeset .admonition.dossier, .md-typeset details.dossier, .md-typeset .admonition.upgrades, .md-typeset details.upgrades {
+    border-color: var(--badge-bg-dossier);
+}
+
+.md-typeset .dossier > .admonition-title, .md-typeset .dossier > summary, .md-typeset .upgrades > .admonition-title, .md-typeset .upgrades > summary {
+    background-color: var(--header-bg-dossier);
+    border-color: var(--badge-bg-dossier);
+}
+
+    .md-typeset .dossier > .admonition-title::before, .md-typeset .dossier > summary::before {
+        background-color: var(--badge-bg-dossier);
+        -webkit-mask-image: var(--md-admonition-icon--dossier);
+        mask-image: var(--md-admonition-icon--dossier);
+    }
+
+    .md-typeset .upgrades > .admonition-title::before, .md-typeset .upgrades > summary::before {
+        background-color: var(--badge-bg-feature);
+        -webkit-mask-image: var(--md-admonition-icon--upgrade);
+        mask-image: var(--md-admonition-icon--upgrade);
+    }
+
+/* =========================================================
+   MOVE CARD UPGRADES
+   ========================================================= */
+
+.md-typeset details.card-upgrades {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important; /* Fixes opacity overlap */
+    margin-top: 1rem;
+    padding: 0;
+}
+
+    /* Format Summary */
+    .md-typeset details.card-upgrades > summary {
+        background-color: transparent !important;
+        padding: 0.5rem !important;
+        margin: 0 -0.5rem; /* Pulls hover box slightly wider than text for a clean wrap */
+        font-size: 0.9em;
+        font-weight: 600;
+        color: var(--md-default-fg-color--light); /* Faded until interacted with */
+        border-radius: 0.35rem;
+        box-shadow: none !important;
+        transition: color 0.15s ease, background-color 0.15s ease;
+        display: flex;
+        align-items: center;
+    }
+
+        /* Hover and Open States */
+        .md-typeset details.card-upgrades > summary:hover,
+        .md-typeset details.card-upgrades[open] > summary {
+            color: var(--badge-bg-feature);
+            background-color: rgba(128, 128, 128, 0.08) !important;
+        }
+
+        /* Icon */
+        .md-typeset details.card-upgrades > summary::before {
+            display: block !important;
+            position: static !important;
+            flex-shrink: 0;
+            content: "";
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 0.5rem;
+            background-color: currentColor;
+            -webkit-mask-image: var(--md-admonition-icon--upgrade);
+            mask-image: var(--md-admonition-icon--upgrade);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+        }
+
+        /* Push the chevron to the right */
+        .md-typeset details.card-upgrades > summary::after {
+            background-color: currentColor !important;
+            margin-left: auto !important; /* Forces it to far right of the flex container */
+        }
+
+    /* Body Styling */
+    .md-typeset details.card-upgrades .upgrades-body {
+        padding: 0.5rem 0 0 0.75rem !important;
+        margin-top: 0.25rem;
+        margin-left: 0.6rem; /* Aligns border directly under the center of the icon */
+        border-left: 2px solid rgba(128, 128, 128, 0.2);
+        font-size: 1em;
+    }
+
+/* =========================================================
+   INLINE STAT STYLING
+   ========================================================= */
+.md-typeset .inline-stat {
+    white-space: nowrap;
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset .inline-stat strong {
+    font-family: var(--md-code-font-family);
+}
+
+.md-typeset .inline-stat .twemoji {
+    transform: scale(.92);
+    vertical-align: -0.25em;
+}
